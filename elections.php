@@ -64,37 +64,39 @@ foreach ($electionLinks AS $electionLink) {
         $result[$electionTitle]['titles'] = $titles;
     }
     $pos = strpos($electionLinkText, '<tr class="data">');
-    $posEnd = strpos($electionLinkText, '</table>', $pos);
-    $electionLinkText = substr($electionLinkText, $pos, $posEnd - $pos);
-    $lines = explode('</tr>', $electionLinkText);
-    $firstColsCount = false;
-    foreach ($lines AS $line) {
-        $cols = explode('</td>', $line);
-        foreach ($cols AS $k => $v) {
-            $cols[$k] = trim(strip_tags($v));
-        }
-        $colsCount = count($cols);
-        if (false === $firstColsCount) {
-            $firstColsCount = $colsCount;
-        }
-        if ($firstColsCount === $colsCount) {
-            $currentArea = $cols[0];
-            $currentAreaKey = 0;
-            $result[$electionTitle][$currentArea] = array();
-            $newCols = array();
-            for ($i = 1; $i < $firstColsCount; $i++) {
-                $newCols[] = $cols[$i];
+    if (false !== $pos) {
+        $posEnd = strpos($electionLinkText, '</table>', $pos);
+        $electionLinkText = substr($electionLinkText, $pos, $posEnd - $pos);
+        $lines = explode('</tr>', $electionLinkText);
+        $firstColsCount = false;
+        foreach ($lines AS $line) {
+            $cols = explode('</td>', $line);
+            foreach ($cols AS $k => $v) {
+                $cols[$k] = trim(strip_tags($v));
             }
-            array_pop($newCols);
-            $result[$electionTitle][$currentArea][$currentAreaKey] = $newCols;
-        } elseif ($colsCount === $firstColsCount - 1) {
-            ++$currentAreaKey;
-            array_pop($cols);
-            $result[$electionTitle][$currentArea][$currentAreaKey] = $cols;
-        } elseif ($colsCount > 1) {
-            $result[$electionTitle][$currentArea][$currentAreaKey][0] .= '|' . $cols[0];
-            $result[$electionTitle][$currentArea][$currentAreaKey][2] .= '|' . $cols[1];
-            $result[$electionTitle][$currentArea][$currentAreaKey][3] .= '|' . $cols[2];
+            $colsCount = count($cols);
+            if (false === $firstColsCount) {
+                $firstColsCount = $colsCount;
+            }
+            if ($firstColsCount === $colsCount) {
+                $currentArea = $cols[0];
+                $currentAreaKey = 0;
+                $result[$electionTitle][$currentArea] = array();
+                $newCols = array();
+                for ($i = 1; $i < $firstColsCount; $i++) {
+                    $newCols[] = $cols[$i];
+                }
+                array_pop($newCols);
+                $result[$electionTitle][$currentArea][$currentAreaKey] = $newCols;
+            } elseif ($colsCount === $firstColsCount - 1) {
+                ++$currentAreaKey;
+                array_pop($cols);
+                $result[$electionTitle][$currentArea][$currentAreaKey] = $cols;
+            } elseif ($colsCount > 1) {
+                $result[$electionTitle][$currentArea][$currentAreaKey][0] .= '|' . $cols[0];
+                $result[$electionTitle][$currentArea][$currentAreaKey][2] .= '|' . $cols[1];
+                $result[$electionTitle][$currentArea][$currentAreaKey][3] .= '|' . $cols[2];
+            }
         }
     }
 }
