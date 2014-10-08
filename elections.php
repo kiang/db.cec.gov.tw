@@ -34,7 +34,7 @@ $electionLinks = array();
 $items = parsehistQuery($items);
 $result = array();
 $fh = fopen(__DIR__ . '/elections.csv', 'w');
-fputcsv($fh, array('代號', '選舉名稱'));
+fputcsv($fh, array('代號', '選舉名稱', '選舉日期'));
 foreach ($electionLinks AS $electionLink) {
     $urlParts = explode('voteCode=', $electionLink['url']);
     $electionCode = substr($urlParts[1], 0, strpos($urlParts[1], '&'));
@@ -51,7 +51,24 @@ foreach ($electionLinks AS $electionLink) {
     $electionLinkText = file_get_contents($electionLinkFile);
     if (!isset($result[$electionTitle])) {
         $result[$electionTitle] = array();
-        fputcsv($fh, array($electionCode, $electionTitle));
+
+        $electionDatePos = strpos($electionLinkText, '投票日期');
+        $electionDatePosEnd = strpos($electionLinkText, '<', $electionDatePos);
+        $electionDate = substr($electionLinkText, $electionDatePos, $electionDatePosEnd - $electionDatePos);
+        $matches = array();
+        preg_match_all('/[0-9]+/', $electionDate, $matches);
+        if (count($matches[0]) !== 3) {
+            print_r($matches);
+            exit();
+        } else {
+            $electionDate = implode('-', array(
+                $matches[0][0] + 1911,
+                $matches[0][1],
+                $matches[0][2],
+            ));
+        }
+        fputcsv($fh, array($electionCode, $electionTitle, $electionDate));
+
         $pos = strpos($electionLinkText, '<tr class="title">');
         $posEnd = strpos($electionLinkText, '</tr>', $pos);
         $titleText = substr($electionLinkText, $pos, $posEnd - $pos);
