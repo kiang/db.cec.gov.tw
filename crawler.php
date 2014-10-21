@@ -43,25 +43,38 @@ class Crawler
         }
     }
 
-    public function main($voteCode)
+    public function main($voteCode, $is_village)
     {
         // 全台灣含黨籍
         if (!$voteCode) {
             throw new Exception("php crawler.php {voteCode}");
         }
-        $url = "http://db.cec.gov.tw/histQuery.jsp?voteCode=" . $voteCode . "&qryType=ctks";
-        $table = $this->getTableFromHTML($url);
-        file_put_contents(__DIR__ . '/crawler.log', "{$voteCode},{$table['title']}\n", FILE_APPEND);
-        $fp = fopen(__DIR__ . "/elections/{$voteCode}.csv", 'w');
-        fputcsv($fp, $table['columns']);
-        $areas = array();
-        foreach ($table['values'] as $rows) {
-            $areas[$rows[0][1]] = $rows[0][0];
-            fputcsv($fp, array_map(function($a){ return is_array($a) ? $a[1] : $a; }, $rows));
-        }
-        fclose($fp);
+        if ($is_village != 'village') {
+            $url = "http://db.cec.gov.tw/histQuery.jsp?voteCode=" . $voteCode . "&qryType=ctks";
+            $table = $this->getTableFromHTML($url);
+            file_put_contents(__DIR__ . '/crawler.log', "{$voteCode},{$table['title']}\n", FILE_APPEND);
+            $fp = fopen(__DIR__ . "/elections/{$voteCode}.csv", 'w');
+            fputcsv($fp, $table['columns']);
+            $areas = array();
+            foreach ($table['values'] as $rows) {
+                $areas[$rows[0][1]] = $rows[0][0];
+                fputcsv($fp, array_map(function($a){ return is_array($a) ? $a[1] : $a; }, $rows));
+            }
+            fclose($fp);
 
-        $this->crawlNext($voteCode, $areas, 1);
+            $this->crawlNext($voteCode, $areas, 1);
+        } else {
+            $url = "http://db.cec.gov.tw/histQuery.jsp?voteCode={$voteCode}&qryType=ctks";
+            $curl = curl_init($url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $content = curl_exec($curl);
+            $info = curl_getinfo($curl);
+            curl_close($curl);
+
+            preg_match_all('#histQuery.jsp\?[^"]*#', $content, $matches);
+
+            $this->crawlNext($voteCode, $matches[0], 1);
+        }
     }
 
     public function getTableFromHTML($url)
@@ -143,4 +156,4 @@ class Crawler
 }
 
 $c = new Crawler;
-$c->main($_SERVER['argv'][1]);
+$c->main($_SERVER['argv'][1], $_SERVER['argv'][2]);
