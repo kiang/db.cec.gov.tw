@@ -120,8 +120,18 @@ foreach ($electionLinks AS $electionLink) {
 fclose($fh);
 
 foreach ($result AS $election => $data) {
-    $eFh = fopen("{$electionPath}/{$data['code']}.csv", 'w');
-    fputcsv($eFh, $data['titles']);
+    if (file_exists("{$electionPath}/{$data['code']}.csv")) {
+        unlink("{$electionPath}/{$data['code']}.csv");
+    }
+}
+
+foreach ($result AS $election => $data) {
+    if (!file_exists("{$electionPath}/{$data['code']}.csv")) {
+        $eFh = fopen("{$electionPath}/{$data['code']}.csv", 'w');
+        fputcsv($eFh, $data['titles']);
+    } else {
+        $eFh = fopen("{$electionPath}/{$data['code']}.csv", 'a');
+    }
     unset($result[$election]['titles']);
     unset($result[$election]['code']);
     foreach ($result[$election] AS $area => $candidates) {
