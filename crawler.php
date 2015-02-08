@@ -125,7 +125,7 @@ class Crawler
             $rows = array();
             $td_index = 0;
             for ($j = 0; $j < count($columns); $j ++) {
-                if ($row_spans[$j]) {
+                if (isset($row_spans[$j])) {
                     $rows[] = $last_values[$j];
                     $row_spans[$j] --;
                     continue;
