@@ -14,8 +14,8 @@ class Crawler
         $i = 0;
         foreach ($areas as $area_name => $area_url) {
             $i ++;
-            error_log("{$i}/{$total} {$url}");
             $url = "http://db.cec.gov.tw/" . $area_url;
+            error_log("{$i}/{$total} {$url}");
             $table = $this->getTableFromHTML($url);
             if (!$column_showed) {
                 $column_showed = true;
@@ -125,7 +125,7 @@ class Crawler
             $rows = array();
             $td_index = 0;
             for ($j = 0; $j < count($columns); $j ++) {
-                if (isset($row_spans[$j])) {
+                if (isset($row_spans[$j]) && $row_spans[$j]) {
                     $rows[] = $last_values[$j];
                     $row_spans[$j] --;
                     continue;
@@ -146,7 +146,7 @@ class Crawler
             }
             $values[] = $rows;
         }
-
+        
         return array(
             'title' => $title,
             'columns' => $columns,
@@ -156,4 +156,4 @@ class Crawler
 }
 
 $c = new Crawler;
-$c->main($_SERVER['argv'][1], $_SERVER['argv'][2]);
+$c->main($_SERVER['argv'][1], isset($_SERVER['argv'][2]) ? $_SERVER['argv'][2] : '');
