@@ -2,6 +2,55 @@
 $data2020 = json_decode(file_get_contents(dirname(__DIR__) . '/data/2020_party_cunli.json'), true);
 $basePath = dirname(__DIR__) . '/voteData/2018-107年地方公職人員選舉';
 
+/*
+ * elbase.csv 行政區基本資料
+  elcand.csv 候選人基本資料
+  elpaty.csv 政黨基本資料
+  elprof.csv 選舉概況檔
+  elctks.csv 候選人得票檔
+*/
+
+$parties = array();
+$fh = fopen($basePath . '/直轄市區域議員/elpaty.csv', 'r');
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line AS $k => $v) {
+        $line[$k] = trim($v, '\'');
+    }
+    $parties[$line[0]] = $line[1];
+}
+$fh = fopen($basePath . '/縣市區域議員/elctks.csv', 'r');
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line AS $k => $v) {
+        $line[$k] = trim($v, '\'');
+    }
+    $parties[$line[0]] = $line[1];
+}
+
+$header = array('省市別', '縣市別', '選區別', '鄉鎮市區', '村里別', '投開票所', '候選人號次', '得票數', '得票率', '當選註記');
+$fh = fopen($basePath . '/直轄市區域議員/elctks.csv', 'r');
+$voteCounts = array();
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line AS $k => $v) {
+        $line[$k] = trim($v, '\'');
+    }
+    $data = array_combine($header, $line);
+    if ($data['投開票所'] != 0 || $data['村里別'] != '0000' || $data['鄉鎮市區'] != '000') {
+        continue;
+    }
+    $voteCounts["{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['候選人號次']}"] = intval($data['得票數']);
+}
+$fh = fopen($basePath . '/縣市區域議員/elctks.csv', 'r');
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line AS $k => $v) {
+        $line[$k] = trim($v, '\'');
+    }
+    $data = array_combine($header, $line);
+    if ($data['投開票所'] != 0 || $data['村里別'] != '0000' || $data['鄉鎮市區'] != '000') {
+        continue;
+    }
+    $voteCounts["{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['候選人號次']}"] = intval($data['得票數']);
+}
+
 $header = array('省市', '縣市', '選區', '鄉鎮市區', '村里', '名稱');
 $cunliNames = array();
 $cunli2zone = array();
@@ -73,6 +122,10 @@ foreach($data2020 AS $cunliCode => $cunliVote) {
                 'voteBase' => 0,
                 'votes' => array(),
                 'match' => array(),
+                '2018' => array(
+                    'party' => array(),
+                    'detail' => array(),
+                ),
             );
         }
         $zoneVotes[$zone]['total'] += $cunliVote['total'];
@@ -95,6 +148,16 @@ while($line = fgetcsv($fh, 2048)) {
     $data = array_combine($header, $line);
     if(!empty(trim($data['當選註記']))) {
         $zone = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}";
+        $voteCountsKey = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['號次']}";
+        $zoneVotes[$zone]['2018']['detail'][$voteCountsKey] = array(
+            'name' => $data['名字'],
+            'party' => $parties[$data['政黨代號']],
+            'voteCount' => $voteCounts[$voteCountsKey],
+        );
+        if(!isset($zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]])) {
+            $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] = 0;
+        }
+        $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] += $voteCounts[$voteCountsKey];
         ++$zoneVotes[$zone]['countCand'];
     }   
 }
@@ -106,6 +169,16 @@ while($line = fgetcsv($fh, 2048)) {
     $data = array_combine($header, $line);
     if(!empty(trim($data['當選註記']))) {
         $zone = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}";
+        $voteCountsKey = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['號次']}";
+        $zoneVotes[$zone]['2018']['detail'][$voteCountsKey] = array(
+            'name' => $data['名字'],
+            'party' => $parties[$data['政黨代號']],
+            'voteCount' => $voteCounts[$voteCountsKey],
+        );
+        if(!isset($zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]])) {
+            $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] = 0;
+        }
+        $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] += $voteCounts[$voteCountsKey];
         ++$zoneVotes[$zone]['countCand'];
     }   
 }
