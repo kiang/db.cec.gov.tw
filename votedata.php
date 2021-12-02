@@ -8,13 +8,15 @@ if (!file_exists($tmpPath)) {
 $zipFile = $tmpPath . '/votedata.zip';
 
 if (!file_exists($zipFile)) {
-    file_put_contents($zipFile, file_get_contents('http://data.cec.gov.tw/' . urlencode('選舉資料庫') .'/votedata.zip'));
+    file_put_contents($zipFile, file_get_contents('http://data.cec.gov.tw/' . urlencode('選舉資料庫') .'/voteData.zip'));
 }
 
 exec("cd {$tmpPath} && LANG=C 7z x {$zipFile}");
 
-exec("convmv -fbig5 -tutf8 -r --notest {$tmpPath}");
+exec("convmv --replace -fbig5 -tutf8 -r --notest {$tmpPath}");
 
 unlink($zipFile);
+
+exec("rm -Rf " . __DIR__ . "/voteData");
 
 exec("mv {$tmpPath}/* " . __DIR__ . '/');
