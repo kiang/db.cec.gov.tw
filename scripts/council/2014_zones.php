@@ -2,7 +2,7 @@
 
 include 'vendor/autoload.php';
 
-$basePath = dirname(__DIR__);
+$basePath = dirname(dirname(__DIR__));
 $councilPath = $basePath . '/data/council/2014';
 
 $cunli = json_decode(file_get_contents($councilPath . '/cunli.json'), true);

@@ -7,7 +7,7 @@
   elprof.csv 選舉概況檔
   elctks.csv 候選人得票檔
  */
-$basePath = dirname(__DIR__);
+$basePath = dirname(dirname(__DIR__));
 $councilPath = $basePath . '/data/council/2014';
 if(!file_exists($councilPath)) {
     mkdir($councilPath, 0777, true);

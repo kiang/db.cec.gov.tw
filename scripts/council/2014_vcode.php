@@ -21,7 +21,7 @@
   [V_ID] => 10020010-061
  */
 
-$basePath = dirname(__DIR__);
+$basePath = dirname(dirname(__DIR__));
 $codes = array();
 $json = json_decode(file_get_contents('/home/kiang/public_html/taiwan_basecode/cunli/topo/20150401.json'), true);
 foreach ($json['objects']['20150401']['geometries'] AS $obj) {
