@@ -26,60 +26,125 @@ foreach ($json['features'] as $f) {
     } elseif ('6600600-020' == $f['properties']['VILLAGE_ID']) {
         $zoneId = '66000-06';
     }
-    if ($f['properties']['C_Name'] === '新北市') {
-        switch ($f['properties']['T_Name']) {
-            case '三芝區':
-            case '石門區':
-            case '淡水區':
-            case '八里區':
-                $zoneId = '65000-01';
-                break;
-            case '林口區':
-            case '五股區':
-            case '泰山區':
-                $zoneId = '65000-02';
-                break;
-            case '新莊區':
-                $zoneId = '65000-03';
-                break;
-            case '蘆洲區':
-            case '三重區':
-                $zoneId = '65000-04';
-                break;
-            case '板橋區':
-                $zoneId = '65000-05';
-                break;
-            case '中和區':
-                $zoneId = '65000-06';
-                break;
-            case '永和區':
-                $zoneId = '65000-07';
-                break;
-            case '樹林區':
-            case '鶯歌區':
-            case '土城區':
-            case '三峽區':
-                $zoneId = '65000-08';
-                break;
-            case '新店區':
-            case '深坑區':
-            case '石碇區':
-            case '坪林區':
-            case '烏來區':
-                $zoneId = '65000-09';
-                break;
-            case '平溪區':
-            case '瑞芳區':
-            case '雙溪區':
-            case '貢寮區':
-                $zoneId = '65000-10';
-                break;
-            case '汐止區':
-            case '金山區':
-            case '萬里區':
-                $zoneId = '65000-11';
-                break;
-        }
+    switch ($f['properties']['C_Name']) {
+        case '新北市':
+            switch ($f['properties']['T_Name']) {
+                case '三芝區':
+                case '石門區':
+                case '淡水區':
+                case '八里區':
+                    $zoneId = '65000-01';
+                    break;
+                case '林口區':
+                case '五股區':
+                case '泰山區':
+                    $zoneId = '65000-02';
+                    break;
+                case '新莊區':
+                    $zoneId = '65000-03';
+                    break;
+                case '蘆洲區':
+                case '三重區':
+                    $zoneId = '65000-04';
+                    break;
+                case '板橋區':
+                    $zoneId = '65000-05';
+                    break;
+                case '中和區':
+                    $zoneId = '65000-06';
+                    break;
+                case '永和區':
+                    $zoneId = '65000-07';
+                    break;
+                case '樹林區':
+                case '鶯歌區':
+                case '土城區':
+                case '三峽區':
+                    $zoneId = '65000-08';
+                    break;
+                case '新店區':
+                case '深坑區':
+                case '石碇區':
+                case '坪林區':
+                case '烏來區':
+                    $zoneId = '65000-09';
+                    break;
+                case '平溪區':
+                case '瑞芳區':
+                case '雙溪區':
+                case '貢寮區':
+                    $zoneId = '65000-10';
+                    break;
+                case '汐止區':
+                case '金山區':
+                case '萬里區':
+                    $zoneId = '65000-11';
+                    break;
+            }
+            break;
+        case '臺南市':
+            switch ($f['properties']['T_Name']) {
+                case '新營區':
+                case '鹽水區':
+                case '柳營區':
+                case '後壁區':
+                case '白河區':
+                case '東山區':
+                    $zoneId = '67000-01';
+                    break;
+                case '佳里區':
+                case '七股區':
+                case '西港區':
+                case '北門區':
+                case '學甲區':
+                case '將軍區':
+                    $zoneId = '67000-02';
+                    break;
+                case '麻豆區':
+                case '六甲區':
+                case '下營區':
+                case '官田區':
+                case '大內區':
+                    $zoneId = '67000-03';
+                    break;
+                case '玉井區':
+                case '南化區':
+                case '楠西區':
+                case '左鎮區':
+                    $zoneId = '67000-04';
+                    break;
+                case '善化區':
+                case '安定區':
+                case '山上區':
+                case '新化區':
+                case '新市區':
+                    $zoneId = '67000-05';
+                    break;
+                case '安南區':
+                    $zoneId = '67000-06';
+                    break;
+                case '永康區':
+                    $zoneId = '67000-07';
+                    break;
+                case '北區':
+                case '中西區':
+                    $zoneId = '67000-08';
+                    break;
+                case '安平區':
+                case '南區':
+                    $zoneId = '67000-09';
+                    break;
+                case '東區':
+                    $zoneId = '67000-10';
+                    break;
+                case '仁德區':
+                case '歸仁區':
+                case '關廟區':
+                case '龍崎區':
+                    $zoneId = '67000-11';
+                    break;
+            }
+            break;
     }
     if (!isset($zoneAreas[$zoneId])) {
         $zoneAreas[$zoneId] = [];
