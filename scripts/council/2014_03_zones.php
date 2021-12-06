@@ -1,8 +1,8 @@
 <?php
 
-include 'vendor/autoload.php';
-
 $basePath = dirname(dirname(__DIR__));
+include $basePath . '/scripts/vendor/autoload.php';
+
 $councilPath = $basePath . '/data/council/2014';
 
 $cunli = json_decode(file_get_contents($councilPath . '/cunli.json'), true);
