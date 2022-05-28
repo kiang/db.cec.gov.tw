@@ -46,4 +46,4 @@ while($line = fgetcsv($fh, 2048)) {
         $result[$cunliCode]['votes'][$cand[$data['號次']]] += $data['得票數'];
     }
 }
-file_put_contents(dirname(__DIR__) . '/data/2020_party_cunli.json', json_encode($result));
+file_put_contents(dirname(__DIR__) . '/data/2020_party_cunli.json', json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
