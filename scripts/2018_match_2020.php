@@ -13,14 +13,14 @@ $basePath = dirname(__DIR__) . '/voteData/2018-107年地方公職人員選舉';
 $parties = array();
 $fh = fopen($basePath . '/直轄市區域議員/elpaty.csv', 'r');
 while ($line = fgetcsv($fh, 2048)) {
-    foreach ($line AS $k => $v) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $parties[$line[0]] = $line[1];
 }
 $fh = fopen($basePath . '/縣市區域議員/elctks.csv', 'r');
 while ($line = fgetcsv($fh, 2048)) {
-    foreach ($line AS $k => $v) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $parties[$line[0]] = $line[1];
@@ -30,7 +30,7 @@ $header = array('省市別', '縣市別', '選區別', '鄉鎮市區', '村里�
 $fh = fopen($basePath . '/直轄市區域議員/elctks.csv', 'r');
 $voteCounts = array();
 while ($line = fgetcsv($fh, 2048)) {
-    foreach ($line AS $k => $v) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $data = array_combine($header, $line);
@@ -41,7 +41,7 @@ while ($line = fgetcsv($fh, 2048)) {
 }
 $fh = fopen($basePath . '/縣市區域議員/elctks.csv', 'r');
 while ($line = fgetcsv($fh, 2048)) {
-    foreach ($line AS $k => $v) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $data = array_combine($header, $line);
@@ -55,30 +55,30 @@ $header = array('省市', '縣市', '選區', '鄉鎮市區', '村里', '名稱'
 $cunliNames = array();
 $cunli2zone = array();
 $fh = fopen($basePath . '/直轄市區域議員/elbase.csv', 'r');
-while($line = fgetcsv($fh, 2048)) {
-    foreach($line AS $k => $v) {
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $data = array_combine($header, $line);
-    if($data['選區'] !== '00' && $data['村里'] !== '0000') {
+    if ($data['選區'] !== '00' && $data['村里'] !== '0000') {
         $cunli2zone["{$data['省市']}{$data['縣市']}{$data['鄉鎮市區']}{$data['村里']}"] = "{$data['省市']}{$data['縣市']}{$data['選區']}";
         $cunliNames["{$data['省市']}{$data['縣市']}{$data['鄉鎮市區']}{$data['村里']}"] = $data['名稱'];
     }
 }
 
 $fh = fopen($basePath . '/縣市區域議員/elbase.csv', 'r');
-while($line = fgetcsv($fh, 2048)) {
-    foreach($line AS $k => $v) {
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $data = array_combine($header, $line);
-    if($data['選區'] !== '00' && $data['村里'] !== '0000') {
+    if ($data['選區'] !== '00' && $data['村里'] !== '0000') {
         $cunli2zone["{$data['省市']}{$data['縣市']}{$data['鄉鎮市區']}{$data['村里']}"] = "{$data['省市']}{$data['縣市']}{$data['選區']}";
         $cunliNames["{$data['省市']}{$data['縣市']}{$data['鄉鎮市區']}{$data['村里']}"] = $data['名稱'];
     }
 }
 
-$missing = array (
+$missing = array(
     '10005070A005' => '1000501',
     '10008090A004' => '1000803',
     '10013010A001' => '1001301',
@@ -106,15 +106,15 @@ $missing = array (
     '09007040A001' => '0900704',
 );
 $zoneVotes = array();
-foreach($data2020 AS $cunliCode => $cunliVote) {
+foreach ($data2020 as $cunliCode => $cunliVote) {
     $zone = false;
-    if(isset($cunli2zone[$cunliCode])) {
+    if (isset($cunli2zone[$cunliCode])) {
         $zone = $cunli2zone[$cunliCode];
-    } elseif(isset($missing[$cunliCode])) {
+    } elseif (isset($missing[$cunliCode])) {
         $zone = $missing[$cunliCode];
     }
-    if(false !== $zone) {
-        if(!isset($zoneVotes[$zone])) {
+    if (false !== $zone) {
+        if (!isset($zoneVotes[$zone])) {
             $zoneVotes[$zone] = array(
                 'name' => mb_substr($cunliVote['name'], 0, 3, 'utf-8') . substr($zone, -2),
                 'total' => 0,
@@ -129,8 +129,8 @@ foreach($data2020 AS $cunliCode => $cunliVote) {
             );
         }
         $zoneVotes[$zone]['total'] += $cunliVote['total'];
-        foreach($cunliVote['votes'] AS $k => $v) {
-            if(!isset($zoneVotes[$zone]['votes'][$k])) {
+        foreach ($cunliVote['votes'] as $k => $v) {
+            if (!isset($zoneVotes[$zone]['votes'][$k])) {
                 $zoneVotes[$zone]['votes'][$k] = 0;
             }
             $zoneVotes[$zone]['votes'][$k] += $v;
@@ -141,62 +141,72 @@ ksort($zoneVotes);
 
 $header = array('省市別', '縣市別', '選區別', '鄉鎮市區', '村里別', '號次', '名字', '政黨代號', '性別', '出生日期', '年齡', '出生地', '學歷', '現任', '當選註記', '副手');
 $fh = fopen($basePath . '/直轄市區域議員/elcand.csv', 'r');
-while($line = fgetcsv($fh, 2048)) {
-    foreach($line AS $k => $v) {
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $data = array_combine($header, $line);
-    if(!empty(trim($data['當選註記']))) {
-        $zone = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}";
-        $voteCountsKey = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['號次']}";
-        $zoneVotes[$zone]['2018']['detail'][$voteCountsKey] = array(
-            'name' => $data['名字'],
-            'party' => $parties[$data['政黨代號']],
-            'voteCount' => $voteCounts[$voteCountsKey],
-        );
-        if(!isset($zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]])) {
-            $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] = 0;
-        }
-        $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] += $voteCounts[$voteCountsKey];
+    $winnerMark = trim($data['當選註記']);
+    $zone = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}";
+    if (!empty($winnerMark)) {
         ++$zoneVotes[$zone]['countCand'];
-    }   
+    }
+    $voteCountsKey = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['號次']}";
+    $zoneVotes[$zone]['2018']['detail'][$voteCountsKey] = array(
+        'name' => $data['名字'],
+        'party' => $parties[$data['政黨代號']],
+        'voteCount' => $voteCounts[$voteCountsKey],
+        'elected' => !empty($winnerMark) ? true : false,
+    );
+    if (!isset($zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]])) {
+        $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] = 0;
+    }
+    $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] += $voteCounts[$voteCountsKey];
 }
 $fh = fopen($basePath . '/縣市區域議員/elcand.csv', 'r');
-while($line = fgetcsv($fh, 2048)) {
-    foreach($line AS $k => $v) {
+while ($line = fgetcsv($fh, 2048)) {
+    foreach ($line as $k => $v) {
         $line[$k] = trim($v, '\'');
     }
     $data = array_combine($header, $line);
-    if(!empty(trim($data['當選註記']))) {
-        $zone = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}";
-        $voteCountsKey = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['號次']}";
-        $zoneVotes[$zone]['2018']['detail'][$voteCountsKey] = array(
-            'name' => $data['名字'],
-            'party' => $parties[$data['政黨代號']],
-            'voteCount' => $voteCounts[$voteCountsKey],
-        );
-        if(!isset($zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]])) {
-            $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] = 0;
-        }
-        $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] += $voteCounts[$voteCountsKey];
+    $winnerMark = trim($data['當選註記']);
+    $zone = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}";
+    if (!empty($winnerMark)) {
         ++$zoneVotes[$zone]['countCand'];
-    }   
+    }
+    $voteCountsKey = "{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['號次']}";
+    $zoneVotes[$zone]['2018']['detail'][$voteCountsKey] = array(
+        'name' => $data['名字'],
+        'party' => $parties[$data['政黨代號']],
+        'voteCount' => $voteCounts[$voteCountsKey],
+        'elected' => !empty($winnerMark) ? true : false,
+    );
+    if (!isset($zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]])) {
+        $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] = 0;
+    }
+    $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] += $voteCounts[$voteCountsKey];
 }
 
 $result = array();
-foreach($zoneVotes AS $zone => $meta) {
+foreach ($zoneVotes as $zone => $meta) {
+    if (empty($meta['countCand'])) {
+        print_r($meta);
+        continue;
+    }
     $zoneVotes[$zone]['voteBase'] = ceil($meta['total'] / $meta['countCand']);
-    foreach($meta['votes'] AS $party => $vote) {
-        if($vote > $zoneVotes[$zone]['voteBase']) {
+    foreach ($meta['votes'] as $party => $vote) {
+        if ($vote > $zoneVotes[$zone]['voteBase']) {
             $zoneVotes[$zone]['match'][$party] = floor($vote / $zoneVotes[$zone]['voteBase']);
-            if(!isset($result[$party])) {
+            if (!isset($result[$party])) {
                 $result[$party] = array();
             }
             $result[$party][$meta['name']] = $zoneVotes[$zone]['match'][$party];
         }
     }
 }
+
 file_put_contents(dirname(__DIR__) . '/data/2018_match_2020.json', json_encode($zoneVotes,  JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-foreach($result AS $key => $val) {
-    echo "\n\n" . $key . ': ' . implode(',', array_keys($val));
-}
+
+// foreach ($result as $key => $val) {
+//     echo "\n\n" . $key . ': ' . implode(',', array_keys($val));
+// }
