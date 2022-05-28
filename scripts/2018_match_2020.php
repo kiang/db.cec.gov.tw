@@ -198,7 +198,7 @@ function cmp($a, $b)
 $result = array();
 foreach ($zoneVotes as $zone => $meta) {
     $zoneVotes[$zone]['voteBase'] = ceil($meta['total'] / $meta['countCand']);
-    uasort($zoneVotes[$zone]['2018']['detail'], 'cmp');
+    usort($zoneVotes[$zone]['2018']['detail'], 'cmp');
     foreach ($meta['votes'] as $party => $vote) {
         if ($vote > $zoneVotes[$zone]['voteBase']) {
             $zoneVotes[$zone]['match'][$party] = floor($vote / $zoneVotes[$zone]['voteBase']);
