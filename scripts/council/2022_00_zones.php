@@ -18,7 +18,8 @@ $geoPHP = new geoPHP();
 
 $result = array();
 $pool = [];
-$zoneAreas = [];
+$zoneAreas = $zoneName = [];
+$city = [];
 foreach ($json['features'] as $f) {
     $zoneId = false;
     if (isset($map[$f['properties']['VILLAGE_ID']])) {
@@ -146,16 +147,33 @@ foreach ($json['features'] as $f) {
             }
             break;
     }
+    $city[$zoneId] = $f['properties']['C_Name'];
     if (!isset($zoneAreas[$zoneId])) {
         $zoneAreas[$zoneId] = [];
     }
     $zoneAreas[$zoneId][$f['properties']['T_Name']] = true;
+
     if (false !== $zoneId) {
+        $zoneName[$zoneId] = $f['properties']['C_Name'] . '第' . substr($zoneId, -2) . '選區';
         if (!isset($result[$zoneId])) {
             $result[$zoneId] = $geoPHP::load(json_encode($f['geometry']), 'json');
         } else {
             $result[$zoneId] = $result[$zoneId]->union($geoPHP::load(json_encode($f['geometry']), 'json'));
         }
+    }
+}
+$councilPath = $basePath . '/data/council/2022';
+if (!file_exists($councilPath)) {
+    mkdir($councilPath, 0777, true);
+}
+
+ksort($zoneAreas,  SORT_NATURAL);
+
+$fh = fopen($councilPath . '/zones.csv', 'w');
+fputcsv($fh, ['city', 'zone', 'code', 'areas', 'name', 'party']);
+foreach ($zoneAreas as $k => $v) {
+    if (!empty($k)) {
+        fputcsv($fh, [$city[$k], $zoneName[$k], $k, implode('/', array_keys($v)), '', '']);
     }
 }
 
@@ -167,12 +185,10 @@ foreach ($result as $zoneId => $geo) {
     $f->type = 'Feature';
     $f->properties = new stdClass();
     $f->properties->id = $zoneId;
+    $f->properties->name = $zoneName[$zoneId];
     $f->properties->areas = implode(',', array_keys($zoneAreas[$zoneId]));
     $f->geometry = json_decode($geo->out('json'));
     $fc->features[] = $f;
 }
-$councilPath = $basePath . '/data/council/2022';
-if (!file_exists($councilPath)) {
-    mkdir($councilPath, 0777, true);
-}
+
 file_put_contents($councilPath . '/zones.json', json_encode($fc, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
