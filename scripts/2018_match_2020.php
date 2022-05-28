@@ -187,13 +187,18 @@ while ($line = fgetcsv($fh, 2048)) {
     $zoneVotes[$zone]['2018']['party'][$parties[$data['政黨代號']]] += $voteCounts[$voteCountsKey];
 }
 
+function cmp($a, $b)
+{
+    if ($a['voteCount'] == $b['voteCount']) {
+        return 0;
+    }
+    return ($a['voteCount'] > $b['voteCount']) ? -1 : 1;
+}
+
 $result = array();
 foreach ($zoneVotes as $zone => $meta) {
-    if (empty($meta['countCand'])) {
-        print_r($meta);
-        continue;
-    }
     $zoneVotes[$zone]['voteBase'] = ceil($meta['total'] / $meta['countCand']);
+    uasort($zoneVotes[$zone]['2018']['detail'], 'cmp');
     foreach ($meta['votes'] as $party => $vote) {
         if ($vote > $zoneVotes[$zone]['voteBase']) {
             $zoneVotes[$zone]['match'][$party] = floor($vote / $zoneVotes[$zone]['voteBase']);
