@@ -24,8 +24,122 @@ foreach ($json['features'] as $f) {
     $zoneId = false;
     if (isset($map[$f['properties']['VILLAGE_ID']])) {
         $zoneId = $map[$f['properties']['VILLAGE_ID']];
-    } elseif ('6600600-020' == $f['properties']['VILLAGE_ID']) {
-        $zoneId = '66000-06';
+    } else {
+        switch ($f['properties']['VILLAGE_ID']) {
+            case '6600600-020':
+                $zoneId = '66000-06';
+                break;
+            case '1001802-S01': //新竹空軍基地
+                $zoneId = '10018-04';
+                break;
+            case '6601400-S01': //清泉崗軍事基地
+                $zoneId = '66000-02';
+                break;
+            case '0900701-S01':
+            case '0900701-S02':
+            case '0900701-S03':
+            case '0900701-S04':
+            case '0900701-S05':
+            case '0900701-S06':
+            case '0900701-S07':
+            case '0900701-S08':
+            case '0900701-S09':
+                $zoneId = '09007-01';
+                break;
+            case '0900702-S01':
+            case '0900702-S02':
+            case '0900702-S03':
+            case '0900702-S04':
+            case '0900702-S05':
+            case '0900702-S06':
+            case '0900702-S07':
+            case '0900702-S08':
+            case '0900702-S09':
+                $zoneId = '09007-02';
+                break;
+            case '0900703-S01':
+            case '0900703-S02':
+            case '0900703-S03':
+            case '0900703-S04':
+            case '0900703-S05':
+            case '0900703-S06':
+            case '0900703-S07':
+            case '0900703-S08':
+            case '0900703-S09':
+                $zoneId = '09007-03';
+                break;
+            case '0900704-S01':
+            case '0900704-S02':
+            case '0900704-S03':
+            case '0900704-S04':
+            case '0900704-S05':
+            case '0900704-S06':
+            case '0900704-S07':
+            case '0900704-S08':
+            case '0900704-S09':
+                $zoneId = '09007-04';
+                break;
+            case '1000204-S01':
+            case '1000204-S02':
+            case '1000204-S03':
+            case '1000204-S04':
+            case '1000204-S05':
+            case '1000204-S06':
+            case '1000204-S07':
+            case '1000204-S08':
+                $zoneId = '10002-02';
+                break;
+            case '1001602-S01':
+            case '1001602-S02':
+            case '1001602-S03':
+            case '1001602-S04':
+            case '1001602-S05':
+            case '1001602-S06':
+            case '1001602-S07':
+            case '1001602-S08':
+                $zoneId = '10016-02';
+                break;
+            case '1001603-S01':
+                $zoneId = '10016-03';
+                break;
+            case '1001605-S01':
+                $zoneId = '10016-05';
+                break;
+            case '1001701-S01':
+            case '1001701-S02':
+            case '1001701-S03':
+            case '1001701-S04':
+                $zoneId = '10017-01';
+                break;
+            case '1001802-S01':
+                $zoneId = '10018-04';
+                break;
+            case '6400200-S01':
+                $zoneId = '64000-06';
+                break;
+            case '6400900-S01':
+                $zoneId = '64000-10';
+                break;
+            case '6401000-S01':
+                $zoneId = '64000-06';
+                break;
+            case '6401100-S01':
+                $zoneId = '64000-10';
+                break;
+            case '6401900-S01':
+                $zoneId = '64000-03';
+                break;
+            case '6601200-S01':
+                $zoneId = '66000-02';
+                break;
+            case '6601400-S01':
+            case '6601400-S02':
+                $zoneId = '66000-02';
+                break;
+            case '6602500-S01':
+                $zoneId = '66000-03';
+                break;
+        }
     }
     switch ($f['properties']['C_Name']) {
         case '新北市':
