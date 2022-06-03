@@ -14,12 +14,19 @@ foreach ($cunli as $code => $items) {
 
 $json = json_decode(file_get_contents('/home/kiang/public_html/taiwan_basecode/cunli/geo/20150401.json'), true);
 
+$councilPath = $basePath . '/data/council/2022';
+if (!file_exists($councilPath)) {
+    mkdir($councilPath, 0777, true);
+}
+
 $geoPHP = new geoPHP();
 
 $result = array();
 $pool = [];
 $zoneAreas = $zoneName = [];
 $city = [];
+$cunliFh = fopen($councilPath . '/cunli.csv', 'w');
+fputcsv($cunliFh, ['zone', 'city', 'area', 'village']);
 foreach ($json['features'] as $f) {
     $zoneId = false;
     if (isset($map[$f['properties']['VILLAGE_ID']])) {
@@ -268,6 +275,10 @@ foreach ($json['features'] as $f) {
     $zoneAreas[$zoneId][$f['properties']['T_Name']] = true;
 
     if (false !== $zoneId) {
+        if (!empty($f['properties']['V_Name'])) {
+            fputcsv($cunliFh, [$zoneId, $f['properties']['C_Name'], $f['properties']['T_Name'], $f['properties']['V_Name']]);
+        }
+
         $zoneName[$zoneId] = $f['properties']['C_Name'] . '第' . substr($zoneId, -2) . '選區';
         if (!isset($result[$zoneId])) {
             $result[$zoneId] = $geoPHP::load(json_encode($f['geometry']), 'json');
@@ -275,10 +286,6 @@ foreach ($json['features'] as $f) {
             $result[$zoneId] = $result[$zoneId]->union($geoPHP::load(json_encode($f['geometry']), 'json'));
         }
     }
-}
-$councilPath = $basePath . '/data/council/2022';
-if (!file_exists($councilPath)) {
-    mkdir($councilPath, 0777, true);
 }
 
 ksort($zoneAreas,  SORT_NATURAL);
