@@ -80,7 +80,7 @@ foreach ($candidateFiles as $candidateFile => $election) {
         foreach ($line as $k => $v) {
             $line[$k] = str_replace('\'', '', $v);
         }
-        $code = $line[0] . $line[1] . $line[2] . $line[3] . $line[4] . '0000' . $line[6];
+        $code = $line[0] . $line[1] . $line[2] . $line[3] . $line[4] . $line[5] . $line[6];
         $votes[$code] = $line[7];
     }
 
@@ -96,7 +96,7 @@ foreach ($candidateFiles as $candidateFile => $election) {
         }
         $data = array_combine($head, $line);
         $code = $line[0] . $line[1] . $line[2] . $line[3] . $line[4];
-        $vcode = $line[0] . $line[1] . $line[2] . $line[3] . $line[4] . '0000' . $data['cand_no'];
+        $vcode = $line[0] . $line[1] . $line[2] . $line[3] . $line[4] . '0' . $data['cand_no'];
         switch ($election) {
             case '直轄市山地原住民區民代表':
             case '直轄市山地原住民區長':

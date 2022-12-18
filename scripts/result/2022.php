@@ -75,7 +75,7 @@ foreach ($candidateFiles as $candidateFile => $election) {
     $head = fgetcsv($fh, 2048);
     $votes = [];
     while ($line = fgetcsv($fh, 2048)) {
-        $code = $line[0] . $line[1] . $line[2] . $line[3] . $line[4] . '0000' . $line[6];
+        $code = $line[0] . $line[1] . $line[2] . $line[3] . $line[4] . $line[5] . $line[6];
         $votes[$code] = $line[7];
     }
 
