@@ -2,9 +2,15 @@
 $basePath = dirname(dirname(__DIR__));
 $dataPath = $basePath . '/data/2014';
 
-$pool = $cityPool = [];
+$pool = $cityPool = $meta = [];
 $years = ['2014', '2018', '2022'];
 foreach ($years as $y) {
+    $meta[$y] = [
+        'candidates' => 0,
+        'victors' => 0,
+        're-elected' => 0,
+        'current' => 0,
+    ];
     foreach (glob($basePath . '/data/' . $y . '/*.csv') as $csvFile) {
         $p = pathinfo($csvFile);
         $type = $p['filename'];
@@ -28,6 +34,16 @@ foreach ($years as $y) {
         $head = fgetcsv($fh, 2048);
         while ($line = fgetcsv($fh, 2048)) {
             $data = array_combine($head, $line);
+            ++$meta[$y]['candidates'];
+            if($data['is_current'] === 'Y') {
+                ++$meta[$y]['current'];
+                if($data['is_victor'] === 'Y') {
+                    ++$meta[$y]['re-elected'];
+                }
+            }
+            if($data['is_victor'] === 'Y') {
+                ++$meta[$y]['victors'];
+            }
             $city = mb_substr($data['area'], 0, 3, 'utf-8');
             if (!isset($cityPool[$city])) {
                 $cityPool[$city] = [];
@@ -84,3 +100,5 @@ foreach ($cityPool as $city => $pool) {
         fputcsv($oFh, $line);
     }
 }
+
+print_r($meta);
