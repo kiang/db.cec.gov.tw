@@ -56,7 +56,7 @@ foreach ($candidateFiles as $candidateFile => $election) {
         $oFh = fopen($electionFile, 'w');
         fputcsv($oFh, [
             'area', 'cand_no', 'cand_name', 'party', 'cand_sex', 'cand_birthday', 'cand_age', 'cand_bornplace', 'cand_edu',
-            'is_current', 'is_victor', 'ticket_num'
+            'is_current', 'is_victor', 'ticket_num', 'prv_code', 'city_code', 'area_code', 'dept_code', 'li_code',
         ]);
     } else {
         $oFh = fopen($electionFile, 'a');
@@ -127,7 +127,8 @@ foreach ($candidateFiles as $candidateFile => $election) {
 
         fputcsv($oFh, [
             $data['area'], $data['cand_no'], $data['cand_name'], $parties[$data['party_code']], $data['cand_sex'], $data['cand_birthday'],
-            $data['cand_age'], $data['cand_bornplace'], $data['cand_edu'], $data['is_current'], $data['is_victor'], $votes[$vcode]
+            $data['cand_age'], $data['cand_bornplace'], $data['cand_edu'], $data['is_current'], $data['is_victor'], $votes[$vcode],
+            $data['prv_code'], $data['city_code'], $data['area_code'], $data['dept_code'], $data['li_code']
         ]);
     }
 }
