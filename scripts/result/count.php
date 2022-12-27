@@ -10,6 +10,7 @@ foreach ($years as $y) {
         'victors' => 0,
         're-elected' => 0,
         'current' => 0,
+        'cunli' => 0,
     ];
     foreach (glob($basePath . '/data/' . $y . '/*.csv') as $csvFile) {
         $p = pathinfo($csvFile);
@@ -43,6 +44,9 @@ foreach ($years as $y) {
             }
             if($data['is_victor'] === 'Y') {
                 ++$meta[$y]['victors'];
+                if($type === '村里長' && $data['is_current'] === 'N') {
+                    ++$meta[$y]['cunli'];
+                }
             }
             $city = mb_substr($data['area'], 0, 3, 'utf-8');
             if (!isset($cityPool[$city])) {
