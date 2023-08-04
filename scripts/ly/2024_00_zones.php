@@ -97,7 +97,7 @@ foreach ($result as $zoneId => $geo) {
     $f->properties->id = $zoneId;
     $f->properties->name = $zones[$zoneId]['name'];
     $f->properties->areas = implode(',', array_keys($zones[$zoneId]['areas']));
-    $f->geometry = json_decode($geo->simplify(0.0001)->out('json'));
+    $f->geometry = json_decode($geo->simplify(0.001, true)->out('json'));
     $fc->features[] = $f;
 }
 
