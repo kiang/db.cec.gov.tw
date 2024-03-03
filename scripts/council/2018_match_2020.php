@@ -1,6 +1,7 @@
 <?php
-$data2020 = json_decode(file_get_contents(dirname(__DIR__) . '/data/2020_party_cunli.json'), true);
-$basePath = dirname(__DIR__) . '/voteData/2018-107年地方公職人員選舉';
+$rootPath = dirname(dirname(__DIR__));
+$data2020 = json_decode(file_get_contents($rootPath . '/data/ly/2020_party_cunli.json'), true);
+$basePath = $rootPath . '/voteData/2018-107年地方公職人員選舉';
 
 /*
  * elbase.csv 行政區基本資料
@@ -210,7 +211,7 @@ foreach ($zoneVotes as $zone => $meta) {
     }
 }
 
-file_put_contents(dirname(__DIR__) . '/data/2018_match_2020.json', json_encode($zoneVotes,  JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+file_put_contents($rootPath . '/data/council/2018/2018_match_2020.json', json_encode($zoneVotes,  JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
 // foreach ($result as $key => $val) {
 //     echo "\n\n" . $key . ': ' . implode(',', array_keys($val));
