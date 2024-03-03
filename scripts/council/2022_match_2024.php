@@ -31,7 +31,6 @@ while ($line = fgetcsv($fh, 2048)) {
 
 $header = array('省市別', '縣市別', '選區別', '鄉鎮市區', '村里別', '投開票所', '候選人號次', '得票數', '得票率', '當選註記');
 $fh = fopen($basePath . '/T1/prv/elctks.csv', 'r');
-fgetcsv($fh, 2048);
 $voteCounts = array();
 while ($line = fgetcsv($fh, 2048)) {
     foreach ($line as $k => $v) {
@@ -43,6 +42,7 @@ while ($line = fgetcsv($fh, 2048)) {
     }
     $voteCounts["{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['候選人號次']}"] = intval($data['得票數']);
 }
+
 $fh = fopen($basePath . '/T1/city/elctks.csv', 'r');
 while ($line = fgetcsv($fh, 2048)) {
     foreach ($line as $k => $v) {
@@ -54,7 +54,6 @@ while ($line = fgetcsv($fh, 2048)) {
     }
     $voteCounts["{$data['省市別']}{$data['縣市別']}{$data['選區別']}{$data['候選人號次']}"] = intval($data['得票數']);
 }
-print_r($voteCounts); exit();
 
 $header = array('省市', '縣市', '選區', '鄉鎮市區', '村里', '名稱');
 $cunliNames = array();

@@ -8591,7 +8591,7 @@
         },
         "2022": {
             "party": {
-                "民主進步黨": 63999,
+                "民主進步黨": 87426,
                 "無黨籍及未經政黨推薦": 60151,
                 "中國國民黨": 64108,
                 "時代力量": 4636,
@@ -8606,6 +8606,12 @@
                     "name": "黃瀞瑩",
                     "party": "台灣民眾黨",
                     "voteCount": 29270,
+                    "elected": true
+                },
+                {
+                    "name": "林延鳳",
+                    "party": "民主進步黨",
+                    "voteCount": 23427,
                     "elected": true
                 },
                 {
@@ -8745,12 +8751,6 @@
                     "party": "共和黨",
                     "voteCount": 67,
                     "elected": false
-                },
-                {
-                    "name": "林延鳳",
-                    "party": "民主進步黨",
-                    "voteCount": null,
-                    "elected": true
                 }
             ]
         }
