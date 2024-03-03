@@ -103,7 +103,7 @@ $pool = [];
 $zoneAreas = $zoneName = [];
 $city = [];
 $cunliFh = fopen($councilPath . '/cunli.csv', 'w');
-fputcsv($cunliFh, ['zone', 'city', 'area', 'village']);
+fputcsv($cunliFh, ['zone', 'city', 'area', 'village', 'village_code']);
 foreach ($json['features'] as $f) {
     $zoneId = $f['properties']['ZONE'];
     $city[$zoneId] = $f['properties']['COUNTYNAME'];
@@ -114,7 +114,7 @@ foreach ($json['features'] as $f) {
 
     if (false !== $zoneId) {
         if (!empty($f['properties']['VILLNAME'])) {
-            fputcsv($cunliFh, [$zoneId, $f['properties']['COUNTYNAME'], $f['properties']['TOWNNAME'], $f['properties']['VILLNAME']]);
+            fputcsv($cunliFh, [$zoneId, $f['properties']['COUNTYNAME'], $f['properties']['TOWNNAME'], $f['properties']['VILLNAME'], $f['properties']['VILLCODE']]);
         }
 
         $zoneName[$zoneId] = $f['properties']['COUNTYNAME'] . '第' . substr($zoneId, -2) . '選區';
@@ -151,3 +151,4 @@ foreach ($result as $zoneId => $geo) {
 }
 
 file_put_contents($councilPath . '/zones.json', json_encode($fc, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+exec('/usr/bin/gzip ' . $councilPath . '/zones.json');
