@@ -100,6 +100,9 @@ if (!file_exists($councilPath)) {
     mkdir($councilPath, 0777, true);
 }
 
+file_put_contents($councilPath . '/cunli.json', json_encode($json, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+exec('/usr/bin/gzip ' . $councilPath . '/cunli.json');
+
 $geoPHP = new geoPHP();
 
 $result = array();
