@@ -1,5 +1,6 @@
 <?php
-$basePath = dirname(__DIR__) . '/voteData/2020總統立委/不分區政黨/';
+$rootPath = dirname(dirname(__DIR__));
+$basePath = $rootPath . '/voteData/2020總統立委/不分區政黨/';
 
 $header = array('省市', '縣市', '選區', '鄉鎮市區', '村里', '名稱');
 $fh = fopen($basePath . '/elbase.csv', 'r');
@@ -46,4 +47,4 @@ while($line = fgetcsv($fh, 2048)) {
         $result[$cunliCode]['votes'][$cand[$data['號次']]] += $data['得票數'];
     }
 }
-file_put_contents(dirname(__DIR__) . '/data/2020_party_cunli.json', json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+file_put_contents($rootPath . '/data/ly/2020_party_cunli.json', json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
