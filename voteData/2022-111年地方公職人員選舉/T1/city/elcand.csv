@@ -1,4 +1,3 @@
-prv_code,city_code,area_code,dept_code,li_code,cand_no,cand_name,party_code,cand_sex,cand_birthday,cand_age,cand_bornplace,cand_edu,is_current,is_victor,is_vice
 09,007,01,000,0000,1,曹爾章,999,1,0591213,51,金馬地區,大學,Y,*, 
 09,007,01,000,0000,2,曹丞君,1,2,0650723,46,金馬地區,高中(職),N,*, 
 09,007,01,000,0000,3,劉浩晨,16,1,0800821,31,臺北市,大學,N, , 

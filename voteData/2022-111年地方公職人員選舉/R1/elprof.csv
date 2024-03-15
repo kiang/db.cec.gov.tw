@@ -1,4 +1,3 @@
-prv_code,city_code,area_code,dept_code,li_code,tbox_no,valid_ticket,invalid_ticket,vote_ticket,votable_population,population,cand_male_num,cand_female_num,cand_num,elected_male_num,elected_female_num,elected_num,elect_to_population,vote_to_elect,elected_to_cand
 00,000,00,000,0000,0000,3054541,132609,3187150,4927490,5920742,2454,771,3225,1491,525,2016,83.22,64.68,62.51
 09,007,00,000,0000,0000,8449,164,8613,11799,13976,22,9,31,16,6,22,84.42,73.00,70.97
 09,007,01,010,0001,0001,712,11,723,1012,0,7,2,9,6,1,7,0.00,71.44,77.78

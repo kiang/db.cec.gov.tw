@@ -1,4 +1,3 @@
-"prv_code","city_code","area_code","dept_code","li_code","tbox_no","valid_ticket","invalid_ticket","vote_ticket","votable_population","population","cand_male_num","cand_female_num","cand_num","elected_male_num","elected_female_num","elected_num","elect_to_population","vote_to_elect","elected_to_cand"
 "63","000","01","110","0027","0205","966","21","987","1266","0","7","1","8","0","1","1","0.0","77.96","12.5"
 "63","000","01","110","0027","0206","889","12","901","1207","0","7","1","8","0","1","1","0.0","74.65","12.5"
 "63","000","01","110","0027","0207","855","21","876","1167","0","7","1","8","0","1","1","0.0","75.06","12.5"

@@ -1,4 +1,3 @@
-prv_code,city_code,area_code,dept_code,li_code,cand_no,cand_name,party_code,cand_sex,cand_birthday,cand_age,cand_bornplace,cand_edu,is_current,is_victor,is_vice
 09,007,00,010,0000,1,陳其平,1,1,0571024,54,金馬地區,高中(職),N, , 
 09,007,00,010,0000,2,林志東,1,1,0550819,56,金馬地區,專科,N,*, 
 09,007,00,020,0000,1,王建華,1,1,0640228,47,金馬地區,大學,N, , 
