@@ -43,6 +43,22 @@ while ($line = fgetcsv($fh, 2048)) {
     $cand[$candKey] = $data['名字'];
     $party[$candKey] = $partyNames[$data['政黨代號']];
 }
+
+$header = array('省市別', '縣市別', '選區別', '鄉鎮市區', '村里別', '投開票所', '有效票', '無效票', '投票數', '選舉人數', '人口數', '候選人數合計', '當選人數合計', '候選人數-男', '候選人數-女', '當選人數-男', '當選人數-女', '選舉人數對人口數', '投票數對選舉人數', '當選人數對候選人數');
+$fh = fopen($basePath . '/elprof.csv', 'r');
+$votesAll = [];
+while ($line = fgetcsv($fh, 2048)) {
+    $data = array_combine($header, $line);
+    if ($data['投開票所'] != 0) {
+        $cunliCode = "{$data['省市別']}{$data['縣市別']}{$data['鄉鎮市區']}{$data['村里別']}";
+        if(!isset($votesAll[$cunliCode])) {
+            $votesAll[$cunliCode] = 0;
+        }
+        $votesAll[$cunliCode] += $data['選舉人數'];
+    }
+}
+
+
 $header = array('省市別', '縣市別', '選區別', '鄉鎮市區', '村里別', '投開票所', '號次', '得票數', '得票率', '當選註記');
 $fh = fopen($basePath . '/elctks.csv', 'r');
 $result = array();
@@ -57,6 +73,7 @@ while ($line = fgetcsv($fh, 2048)) {
                 'zone' => $cunliNames[$zoneCode],
                 'zoneCode' => $zoneCode,
                 'total' => 0,
+                'votes_all' => $votesAll[$cunliCode],
                 'votes' => array(),
             );
         }
