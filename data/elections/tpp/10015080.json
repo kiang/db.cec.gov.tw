@@ -1,0 +1,156 @@
+{
+    "county": "花蓮縣",
+    "town": "豐濱鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 83,
+            "total_votes": 2121,
+            "tpp_rate": 3.91
+        },
+        "2022議員": {
+            "tpp_votes": 2,
+            "total_votes": 367,
+            "tpp_rate": 0.54,
+            "candidates": [
+                {
+                    "name": "潘璿安",
+                    "votes": 2,
+                    "elected": false
+                }
+            ]
+        },
+        "2024不分區": {
+            "tpp_votes": 196,
+            "total_votes": 1935,
+            "tpp_rate": 10.13
+        },
+        "2024總統": {
+            "tpp_votes": 321,
+            "total_votes": 2029,
+            "tpp_rate": 15.82
+        },
+        "party_rate_change": 6.22
+    },
+    "cunlis": [
+        {
+            "villcode": "10015080002",
+            "name": "新社村",
+            "2020不分區": {
+                "tpp_votes": 12,
+                "total_votes": 282,
+                "tpp_rate": 4.26
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 35,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 30,
+                "total_votes": 266,
+                "tpp_rate": 11.28
+            },
+            "2024總統": {
+                "tpp_votes": 51,
+                "total_votes": 284,
+                "tpp_rate": 17.96
+            }
+        },
+        {
+            "villcode": "10015080005",
+            "name": "靜浦村",
+            "2020不分區": {
+                "tpp_votes": 7,
+                "total_votes": 336,
+                "tpp_rate": 2.08
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 22,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 32,
+                "total_votes": 298,
+                "tpp_rate": 10.74
+            },
+            "2024總統": {
+                "tpp_votes": 54,
+                "total_votes": 315,
+                "tpp_rate": 17.14
+            }
+        },
+        {
+            "villcode": "10015080001",
+            "name": "豐濱村",
+            "2020不分區": {
+                "tpp_votes": 31,
+                "total_votes": 868,
+                "tpp_rate": 3.57
+            },
+            "2022議員": {
+                "tpp_votes": 2,
+                "total_votes": 204,
+                "tpp_rate": 0.98
+            },
+            "2024不分區": {
+                "tpp_votes": 81,
+                "total_votes": 774,
+                "tpp_rate": 10.47
+            },
+            "2024總統": {
+                "tpp_votes": 135,
+                "total_votes": 806,
+                "tpp_rate": 16.75
+            }
+        },
+        {
+            "villcode": "10015080004",
+            "name": "港口村",
+            "2020不分區": {
+                "tpp_votes": 22,
+                "total_votes": 421,
+                "tpp_rate": 5.23
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 69,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 40,
+                "total_votes": 408,
+                "tpp_rate": 9.8
+            },
+            "2024總統": {
+                "tpp_votes": 61,
+                "total_votes": 428,
+                "tpp_rate": 14.25
+            }
+        },
+        {
+            "villcode": "10015080003",
+            "name": "磯崎村",
+            "2020不分區": {
+                "tpp_votes": 11,
+                "total_votes": 214,
+                "tpp_rate": 5.14
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 37,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 13,
+                "total_votes": 189,
+                "tpp_rate": 6.88
+            },
+            "2024總統": {
+                "tpp_votes": 20,
+                "total_votes": 196,
+                "tpp_rate": 10.2
+            }
+        }
+    ]
+}

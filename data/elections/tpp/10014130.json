@@ -1,0 +1,150 @@
+{
+    "county": "臺東縣",
+    "town": "延平鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 57,
+            "total_votes": 1707,
+            "tpp_rate": 3.34
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 153,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 279,
+            "total_votes": 1769,
+            "tpp_rate": 15.77
+        },
+        "2024總統": {
+            "tpp_votes": 414,
+            "total_votes": 1822,
+            "tpp_rate": 22.72
+        },
+        "party_rate_change": 12.43
+    },
+    "cunlis": [
+        {
+            "villcode": "10014130002",
+            "name": "永康村",
+            "2020不分區": {
+                "tpp_votes": 3,
+                "total_votes": 177,
+                "tpp_rate": 1.69
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 15,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 40,
+                "total_votes": 208,
+                "tpp_rate": 19.23
+            },
+            "2024總統": {
+                "tpp_votes": 51,
+                "total_votes": 213,
+                "tpp_rate": 23.94
+            }
+        },
+        {
+            "villcode": "10014130005",
+            "name": "桃源村",
+            "2020不分區": {
+                "tpp_votes": 25,
+                "total_votes": 604,
+                "tpp_rate": 4.14
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 70,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 97,
+                "total_votes": 601,
+                "tpp_rate": 16.14
+            },
+            "2024總統": {
+                "tpp_votes": 155,
+                "total_votes": 622,
+                "tpp_rate": 24.92
+            }
+        },
+        {
+            "villcode": "10014130004",
+            "name": "鸞山村",
+            "2020不分區": {
+                "tpp_votes": 9,
+                "total_votes": 337,
+                "tpp_rate": 2.67
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 40,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 51,
+                "total_votes": 335,
+                "tpp_rate": 15.22
+            },
+            "2024總統": {
+                "tpp_votes": 79,
+                "total_votes": 342,
+                "tpp_rate": 23.1
+            }
+        },
+        {
+            "villcode": "10014130001",
+            "name": "武陵村",
+            "2020不分區": {
+                "tpp_votes": 14,
+                "total_votes": 332,
+                "tpp_rate": 4.22
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 13,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 54,
+                "total_votes": 362,
+                "tpp_rate": 14.92
+            },
+            "2024總統": {
+                "tpp_votes": 78,
+                "total_votes": 369,
+                "tpp_rate": 21.14
+            }
+        },
+        {
+            "villcode": "10014130003",
+            "name": "紅葉村",
+            "2020不分區": {
+                "tpp_votes": 6,
+                "total_votes": 257,
+                "tpp_rate": 2.33
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 15,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 37,
+                "total_votes": 263,
+                "tpp_rate": 14.07
+            },
+            "2024總統": {
+                "tpp_votes": 51,
+                "total_votes": 276,
+                "tpp_rate": 18.48
+            }
+        }
+    ]
+}

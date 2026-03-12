@@ -1,0 +1,150 @@
+{
+    "county": "屏東縣",
+    "town": "瑪家鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 79,
+            "total_votes": 2587,
+            "tpp_rate": 3.05
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 79,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 391,
+            "total_votes": 2630,
+            "tpp_rate": 14.87
+        },
+        "2024總統": {
+            "tpp_votes": 708,
+            "total_votes": 2695,
+            "tpp_rate": 26.27
+        },
+        "party_rate_change": 11.82
+    },
+    "cunlis": [
+        {
+            "villcode": "10013280005",
+            "name": "排灣村",
+            "2020不分區": {
+                "tpp_votes": 8,
+                "total_votes": 306,
+                "tpp_rate": 2.61
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 5,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 54,
+                "total_votes": 324,
+                "tpp_rate": 16.67
+            },
+            "2024總統": {
+                "tpp_votes": 97,
+                "total_votes": 333,
+                "tpp_rate": 29.13
+            }
+        },
+        {
+            "villcode": "10013280004",
+            "name": "佳義村",
+            "2020不分區": {
+                "tpp_votes": 18,
+                "total_votes": 655,
+                "tpp_rate": 2.75
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 16,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 103,
+                "total_votes": 659,
+                "tpp_rate": 15.63
+            },
+            "2024總統": {
+                "tpp_votes": 189,
+                "total_votes": 675,
+                "tpp_rate": 28
+            }
+        },
+        {
+            "villcode": "10013280003",
+            "name": "凉山村",
+            "2020不分區": {
+                "tpp_votes": 21,
+                "total_votes": 711,
+                "tpp_rate": 2.95
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 26,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 111,
+                "total_votes": 722,
+                "tpp_rate": 15.37
+            },
+            "2024總統": {
+                "tpp_votes": 203,
+                "total_votes": 743,
+                "tpp_rate": 27.32
+            }
+        },
+        {
+            "villcode": "10013280001",
+            "name": "瑪家村",
+            "2020不分區": {
+                "tpp_votes": 14,
+                "total_votes": 338,
+                "tpp_rate": 4.14
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 9,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 46,
+                "total_votes": 345,
+                "tpp_rate": 13.33
+            },
+            "2024總統": {
+                "tpp_votes": 79,
+                "total_votes": 358,
+                "tpp_rate": 22.07
+            }
+        },
+        {
+            "villcode": "10013280002",
+            "name": "北葉村",
+            "2020不分區": {
+                "tpp_votes": 18,
+                "total_votes": 577,
+                "tpp_rate": 3.12
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 23,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 77,
+                "total_votes": 580,
+                "tpp_rate": 13.28
+            },
+            "2024總統": {
+                "tpp_votes": 140,
+                "total_votes": 586,
+                "tpp_rate": 23.89
+            }
+        }
+    ]
+}

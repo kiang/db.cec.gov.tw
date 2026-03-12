@@ -1,0 +1,198 @@
+{
+    "county": "宜蘭縣",
+    "town": "南澳鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 87,
+            "total_votes": 3106,
+            "tpp_rate": 2.8
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 322,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 365,
+            "total_votes": 2857,
+            "tpp_rate": 12.78
+        },
+        "2024總統": {
+            "tpp_votes": 696,
+            "total_votes": 2944,
+            "tpp_rate": 23.64
+        },
+        "party_rate_change": 9.98
+    },
+    "cunlis": [
+        {
+            "villcode": "10002120006",
+            "name": "金洋村",
+            "2020不分區": {
+                "tpp_votes": 9,
+                "total_votes": 296,
+                "tpp_rate": 3.04
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 18,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 43,
+                "total_votes": 275,
+                "tpp_rate": 15.64
+            },
+            "2024總統": {
+                "tpp_votes": 87,
+                "total_votes": 295,
+                "tpp_rate": 29.49
+            }
+        },
+        {
+            "villcode": "10002120003",
+            "name": "東岳村",
+            "2020不分區": {
+                "tpp_votes": 10,
+                "total_votes": 329,
+                "tpp_rate": 3.04
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 31,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 47,
+                "total_votes": 301,
+                "tpp_rate": 15.61
+            },
+            "2024總統": {
+                "tpp_votes": 84,
+                "total_votes": 309,
+                "tpp_rate": 27.18
+            }
+        },
+        {
+            "villcode": "10002120001",
+            "name": "南澳村",
+            "2020不分區": {
+                "tpp_votes": 33,
+                "total_votes": 788,
+                "tpp_rate": 4.19
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 112,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 106,
+                "total_votes": 723,
+                "tpp_rate": 14.66
+            },
+            "2024總統": {
+                "tpp_votes": 171,
+                "total_votes": 736,
+                "tpp_rate": 23.23
+            }
+        },
+        {
+            "villcode": "10002120002",
+            "name": "碧候村",
+            "2020不分區": {
+                "tpp_votes": 12,
+                "total_votes": 640,
+                "tpp_rate": 1.88
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 49,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 75,
+                "total_votes": 604,
+                "tpp_rate": 12.42
+            },
+            "2024總統": {
+                "tpp_votes": 148,
+                "total_votes": 613,
+                "tpp_rate": 24.14
+            }
+        },
+        {
+            "villcode": "10002120004",
+            "name": "金岳村",
+            "2020不分區": {
+                "tpp_votes": 3,
+                "total_votes": 262,
+                "tpp_rate": 1.15
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 8,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 26,
+                "total_votes": 210,
+                "tpp_rate": 12.38
+            },
+            "2024總統": {
+                "tpp_votes": 49,
+                "total_votes": 219,
+                "tpp_rate": 22.37
+            }
+        },
+        {
+            "villcode": "10002120005",
+            "name": "武塔村",
+            "2020不分區": {
+                "tpp_votes": 8,
+                "total_votes": 303,
+                "tpp_rate": 2.64
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 52,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 34,
+                "total_votes": 289,
+                "tpp_rate": 11.76
+            },
+            "2024總統": {
+                "tpp_votes": 64,
+                "total_votes": 301,
+                "tpp_rate": 21.26
+            }
+        },
+        {
+            "villcode": "10002120007",
+            "name": "澳花村",
+            "2020不分區": {
+                "tpp_votes": 12,
+                "total_votes": 488,
+                "tpp_rate": 2.46
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 52,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 34,
+                "total_votes": 455,
+                "tpp_rate": 7.47
+            },
+            "2024總統": {
+                "tpp_votes": 93,
+                "total_votes": 471,
+                "tpp_rate": 19.75
+            }
+        }
+    ]
+}

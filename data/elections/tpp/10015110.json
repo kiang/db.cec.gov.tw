@@ -1,0 +1,246 @@
+{
+    "county": "花蓮縣",
+    "town": "秀林鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 352,
+            "total_votes": 8057,
+            "tpp_rate": 4.37
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 1005,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 1599,
+            "total_votes": 8313,
+            "tpp_rate": 19.23
+        },
+        "2024總統": {
+            "tpp_votes": 2489,
+            "total_votes": 8550,
+            "tpp_rate": 29.11
+        },
+        "party_rate_change": 14.86
+    },
+    "cunlis": [
+        {
+            "villcode": "10015110005",
+            "name": "銅門村",
+            "2020不分區": {
+                "tpp_votes": 30,
+                "total_votes": 803,
+                "tpp_rate": 3.74
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 37,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 174,
+                "total_votes": 793,
+                "tpp_rate": 21.94
+            },
+            "2024總統": {
+                "tpp_votes": 253,
+                "total_votes": 825,
+                "tpp_rate": 30.67
+            }
+        },
+        {
+            "villcode": "10015110003",
+            "name": "秀林村",
+            "2020不分區": {
+                "tpp_votes": 62,
+                "total_votes": 1097,
+                "tpp_rate": 5.65
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 53,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 240,
+                "total_votes": 1123,
+                "tpp_rate": 21.37
+            },
+            "2024總統": {
+                "tpp_votes": 364,
+                "total_votes": 1149,
+                "tpp_rate": 31.68
+            }
+        },
+        {
+            "villcode": "10015110007",
+            "name": "景美村",
+            "2020不分區": {
+                "tpp_votes": 48,
+                "total_votes": 1092,
+                "tpp_rate": 4.4
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 83,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 234,
+                "total_votes": 1147,
+                "tpp_rate": 20.4
+            },
+            "2024總統": {
+                "tpp_votes": 369,
+                "total_votes": 1173,
+                "tpp_rate": 31.46
+            }
+        },
+        {
+            "villcode": "10015110004",
+            "name": "水源村",
+            "2020不分區": {
+                "tpp_votes": 30,
+                "total_votes": 769,
+                "tpp_rate": 3.9
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 71,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 165,
+                "total_votes": 820,
+                "tpp_rate": 20.12
+            },
+            "2024總統": {
+                "tpp_votes": 251,
+                "total_votes": 848,
+                "tpp_rate": 29.6
+            }
+        },
+        {
+            "villcode": "10015110002",
+            "name": "富世村",
+            "2020不分區": {
+                "tpp_votes": 42,
+                "total_votes": 1111,
+                "tpp_rate": 3.78
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 157,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 226,
+                "total_votes": 1171,
+                "tpp_rate": 19.3
+            },
+            "2024總統": {
+                "tpp_votes": 340,
+                "total_votes": 1201,
+                "tpp_rate": 28.31
+            }
+        },
+        {
+            "villcode": "10015110006",
+            "name": "文蘭村",
+            "2020不分區": {
+                "tpp_votes": 22,
+                "total_votes": 744,
+                "tpp_rate": 2.96
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 58,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 138,
+                "total_votes": 743,
+                "tpp_rate": 18.57
+            },
+            "2024總統": {
+                "tpp_votes": 204,
+                "total_votes": 763,
+                "tpp_rate": 26.74
+            }
+        },
+        {
+            "villcode": "10015110009",
+            "name": "和平村",
+            "2020不分區": {
+                "tpp_votes": 57,
+                "total_votes": 933,
+                "tpp_rate": 6.11
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 314,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 177,
+                "total_votes": 1019,
+                "tpp_rate": 17.37
+            },
+            "2024總統": {
+                "tpp_votes": 286,
+                "total_votes": 1045,
+                "tpp_rate": 27.37
+            }
+        },
+        {
+            "villcode": "10015110001",
+            "name": "崇德村",
+            "2020不分區": {
+                "tpp_votes": 34,
+                "total_votes": 856,
+                "tpp_rate": 3.97
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 171,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 135,
+                "total_votes": 814,
+                "tpp_rate": 16.58
+            },
+            "2024總統": {
+                "tpp_votes": 250,
+                "total_votes": 844,
+                "tpp_rate": 29.62
+            }
+        },
+        {
+            "villcode": "10015110008",
+            "name": "佳民村",
+            "2020不分區": {
+                "tpp_votes": 27,
+                "total_votes": 652,
+                "tpp_rate": 4.14
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 61,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 110,
+                "total_votes": 683,
+                "tpp_rate": 16.11
+            },
+            "2024總統": {
+                "tpp_votes": 172,
+                "total_votes": 702,
+                "tpp_rate": 24.5
+            }
+        }
+    ]
+}

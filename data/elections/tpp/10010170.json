@@ -1,0 +1,150 @@
+{
+    "county": "嘉義縣",
+    "town": "大埔鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 173,
+            "total_votes": 2151,
+            "tpp_rate": 8.04
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 2740,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 332,
+            "total_votes": 2025,
+            "tpp_rate": 16.4
+        },
+        "2024總統": {
+            "tpp_votes": 457,
+            "total_votes": 2108,
+            "tpp_rate": 21.68
+        },
+        "party_rate_change": 8.36
+    },
+    "cunlis": [
+        {
+            "villcode": "10010170001",
+            "name": "大埔村",
+            "2020不分區": {
+                "tpp_votes": 72,
+                "total_votes": 796,
+                "tpp_rate": 9.05
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 960,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 143,
+                "total_votes": 760,
+                "tpp_rate": 18.82
+            },
+            "2024總統": {
+                "tpp_votes": 177,
+                "total_votes": 793,
+                "tpp_rate": 22.32
+            }
+        },
+        {
+            "villcode": "10010170003",
+            "name": "永樂村",
+            "2020不分區": {
+                "tpp_votes": 25,
+                "total_votes": 243,
+                "tpp_rate": 10.29
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 305,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 39,
+                "total_votes": 219,
+                "tpp_rate": 17.81
+            },
+            "2024總統": {
+                "tpp_votes": 55,
+                "total_votes": 223,
+                "tpp_rate": 24.66
+            }
+        },
+        {
+            "villcode": "10010170002",
+            "name": "和平村",
+            "2020不分區": {
+                "tpp_votes": 26,
+                "total_votes": 340,
+                "tpp_rate": 7.65
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 438,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 58,
+                "total_votes": 349,
+                "tpp_rate": 16.62
+            },
+            "2024總統": {
+                "tpp_votes": 84,
+                "total_votes": 365,
+                "tpp_rate": 23.01
+            }
+        },
+        {
+            "villcode": "10010170004",
+            "name": "茄苳村",
+            "2020不分區": {
+                "tpp_votes": 37,
+                "total_votes": 433,
+                "tpp_rate": 8.55
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 650,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 60,
+                "total_votes": 387,
+                "tpp_rate": 15.5
+            },
+            "2024總統": {
+                "tpp_votes": 92,
+                "total_votes": 411,
+                "tpp_rate": 22.38
+            }
+        },
+        {
+            "villcode": "10010170005",
+            "name": "西興村",
+            "2020不分區": {
+                "tpp_votes": 13,
+                "total_votes": 339,
+                "tpp_rate": 3.83
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 387,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 32,
+                "total_votes": 310,
+                "tpp_rate": 10.32
+            },
+            "2024總統": {
+                "tpp_votes": 49,
+                "total_votes": 316,
+                "tpp_rate": 15.51
+            }
+        }
+    ]
+}

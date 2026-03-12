@@ -1,0 +1,198 @@
+{
+    "county": "臺東縣",
+    "town": "鹿野鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 223,
+            "total_votes": 3954,
+            "tpp_rate": 5.64
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 3163,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 539,
+            "total_votes": 3677,
+            "tpp_rate": 14.66
+        },
+        "2024總統": {
+            "tpp_votes": 778,
+            "total_votes": 3812,
+            "tpp_rate": 20.41
+        },
+        "party_rate_change": 9.02
+    },
+    "cunlis": [
+        {
+            "villcode": "10014050001",
+            "name": "瑞和村",
+            "2020不分區": {
+                "tpp_votes": 13,
+                "total_votes": 323,
+                "tpp_rate": 4.02
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 207,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 55,
+                "total_votes": 320,
+                "tpp_rate": 17.19
+            },
+            "2024總統": {
+                "tpp_votes": 86,
+                "total_votes": 327,
+                "tpp_rate": 26.3
+            }
+        },
+        {
+            "villcode": "10014050006",
+            "name": "鹿野村",
+            "2020不分區": {
+                "tpp_votes": 44,
+                "total_votes": 642,
+                "tpp_rate": 6.85
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 419,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 96,
+                "total_votes": 591,
+                "tpp_rate": 16.24
+            },
+            "2024總統": {
+                "tpp_votes": 129,
+                "total_votes": 612,
+                "tpp_rate": 21.08
+            }
+        },
+        {
+            "villcode": "10014050005",
+            "name": "瑞隆村",
+            "2020不分區": {
+                "tpp_votes": 27,
+                "total_votes": 494,
+                "tpp_rate": 5.47
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 379,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 63,
+                "total_votes": 416,
+                "tpp_rate": 15.14
+            },
+            "2024總統": {
+                "tpp_votes": 85,
+                "total_votes": 438,
+                "tpp_rate": 19.41
+            }
+        },
+        {
+            "villcode": "10014050007",
+            "name": "龍田村",
+            "2020不分區": {
+                "tpp_votes": 39,
+                "total_votes": 623,
+                "tpp_rate": 6.26
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 685,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 90,
+                "total_votes": 595,
+                "tpp_rate": 15.13
+            },
+            "2024總統": {
+                "tpp_votes": 116,
+                "total_votes": 620,
+                "tpp_rate": 18.71
+            }
+        },
+        {
+            "villcode": "10014050003",
+            "name": "瑞源村",
+            "2020不分區": {
+                "tpp_votes": 25,
+                "total_votes": 502,
+                "tpp_rate": 4.98
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 306,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 69,
+                "total_votes": 470,
+                "tpp_rate": 14.68
+            },
+            "2024總統": {
+                "tpp_votes": 96,
+                "total_votes": 485,
+                "tpp_rate": 19.79
+            }
+        },
+        {
+            "villcode": "10014050002",
+            "name": "瑞豐村",
+            "2020不分區": {
+                "tpp_votes": 25,
+                "total_votes": 531,
+                "tpp_rate": 4.71
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 516,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 68,
+                "total_votes": 519,
+                "tpp_rate": 13.1
+            },
+            "2024總統": {
+                "tpp_votes": 105,
+                "total_votes": 540,
+                "tpp_rate": 19.44
+            }
+        },
+        {
+            "villcode": "10014050004",
+            "name": "永安村",
+            "2020不分區": {
+                "tpp_votes": 50,
+                "total_votes": 839,
+                "tpp_rate": 5.96
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 651,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 98,
+                "total_votes": 766,
+                "tpp_rate": 12.79
+            },
+            "2024總統": {
+                "tpp_votes": 161,
+                "total_votes": 790,
+                "tpp_rate": 20.38
+            }
+        }
+    ]
+}

@@ -1,0 +1,444 @@
+{
+    "county": "新北市",
+    "town": "泰山區",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 5873,
+            "total_votes": 46413,
+            "tpp_rate": 12.65
+        },
+        "2022議員": {
+            "tpp_votes": 445,
+            "total_votes": 34461,
+            "tpp_rate": 1.29,
+            "candidates": [
+                {
+                    "name": "黃琦翔",
+                    "votes": 445,
+                    "elected": false
+                }
+            ]
+        },
+        "2024不分區": {
+            "tpp_votes": 11086,
+            "total_votes": 45825,
+            "tpp_rate": 24.19
+        },
+        "2024總統": {
+            "tpp_votes": 12955,
+            "total_votes": 46291,
+            "tpp_rate": 27.99
+        },
+        "party_rate_change": 11.54
+    },
+    "cunlis": [
+        {
+            "villcode": "65000160012",
+            "name": "義仁里",
+            "2020不分區": {
+                "tpp_votes": 771,
+                "total_votes": 5320,
+                "tpp_rate": 14.49
+            },
+            "2022議員": {
+                "tpp_votes": 53,
+                "total_votes": 3711,
+                "tpp_rate": 1.43
+            },
+            "2024不分區": {
+                "tpp_votes": 1495,
+                "total_votes": 5479,
+                "tpp_rate": 27.29
+            },
+            "2024總統": {
+                "tpp_votes": 1694,
+                "total_votes": 5518,
+                "tpp_rate": 30.7
+            }
+        },
+        {
+            "villcode": "65000160016",
+            "name": "福興里",
+            "2020不分區": {
+                "tpp_votes": 299,
+                "total_votes": 2265,
+                "tpp_rate": 13.2
+            },
+            "2022議員": {
+                "tpp_votes": 9,
+                "total_votes": 1583,
+                "tpp_rate": 0.57
+            },
+            "2024不分區": {
+                "tpp_votes": 585,
+                "total_votes": 2252,
+                "tpp_rate": 25.98
+            },
+            "2024總統": {
+                "tpp_votes": 672,
+                "total_votes": 2281,
+                "tpp_rate": 29.46
+            }
+        },
+        {
+            "villcode": "65000160017",
+            "name": "全興里",
+            "2020不分區": {
+                "tpp_votes": 814,
+                "total_votes": 5118,
+                "tpp_rate": 15.9
+            },
+            "2022議員": {
+                "tpp_votes": 65,
+                "total_votes": 3617,
+                "tpp_rate": 1.8
+            },
+            "2024不分區": {
+                "tpp_votes": 1385,
+                "total_votes": 5361,
+                "tpp_rate": 25.83
+            },
+            "2024總統": {
+                "tpp_votes": 1578,
+                "total_votes": 5395,
+                "tpp_rate": 29.25
+            }
+        },
+        {
+            "villcode": "65000160005",
+            "name": "楓樹里",
+            "2020不分區": {
+                "tpp_votes": 348,
+                "total_votes": 2802,
+                "tpp_rate": 12.42
+            },
+            "2022議員": {
+                "tpp_votes": 27,
+                "total_votes": 2023,
+                "tpp_rate": 1.33
+            },
+            "2024不分區": {
+                "tpp_votes": 674,
+                "total_votes": 2681,
+                "tpp_rate": 25.14
+            },
+            "2024總統": {
+                "tpp_votes": 788,
+                "total_votes": 2701,
+                "tpp_rate": 29.17
+            }
+        },
+        {
+            "villcode": "65000160007",
+            "name": "義學里",
+            "2020不分區": {
+                "tpp_votes": 357,
+                "total_votes": 3020,
+                "tpp_rate": 11.82
+            },
+            "2022議員": {
+                "tpp_votes": 25,
+                "total_votes": 2135,
+                "tpp_rate": 1.17
+            },
+            "2024不分區": {
+                "tpp_votes": 729,
+                "total_votes": 2923,
+                "tpp_rate": 24.94
+            },
+            "2024總統": {
+                "tpp_votes": 861,
+                "total_votes": 2953,
+                "tpp_rate": 29.16
+            }
+        },
+        {
+            "villcode": "65000160010",
+            "name": "貴和里",
+            "2020不分區": {
+                "tpp_votes": 394,
+                "total_votes": 3141,
+                "tpp_rate": 12.54
+            },
+            "2022議員": {
+                "tpp_votes": 35,
+                "total_votes": 2403,
+                "tpp_rate": 1.46
+            },
+            "2024不分區": {
+                "tpp_votes": 768,
+                "total_votes": 3096,
+                "tpp_rate": 24.81
+            },
+            "2024總統": {
+                "tpp_votes": 891,
+                "total_votes": 3115,
+                "tpp_rate": 28.6
+            }
+        },
+        {
+            "villcode": "65000160003",
+            "name": "山腳里",
+            "2020不分區": {
+                "tpp_votes": 448,
+                "total_votes": 4128,
+                "tpp_rate": 10.85
+            },
+            "2022議員": {
+                "tpp_votes": 36,
+                "total_votes": 3002,
+                "tpp_rate": 1.2
+            },
+            "2024不分區": {
+                "tpp_votes": 996,
+                "total_votes": 4023,
+                "tpp_rate": 24.76
+            },
+            "2024總統": {
+                "tpp_votes": 1152,
+                "total_votes": 4072,
+                "tpp_rate": 28.29
+            }
+        },
+        {
+            "villcode": "65000160002",
+            "name": "黎明里",
+            "2020不分區": {
+                "tpp_votes": 277,
+                "total_votes": 2195,
+                "tpp_rate": 12.62
+            },
+            "2022議員": {
+                "tpp_votes": 19,
+                "total_votes": 1738,
+                "tpp_rate": 1.09
+            },
+            "2024不分區": {
+                "tpp_votes": 504,
+                "total_votes": 2137,
+                "tpp_rate": 23.58
+            },
+            "2024總統": {
+                "tpp_votes": 604,
+                "total_votes": 2166,
+                "tpp_rate": 27.89
+            }
+        },
+        {
+            "villcode": "65000160009",
+            "name": "貴子里",
+            "2020不分區": {
+                "tpp_votes": 314,
+                "total_votes": 2593,
+                "tpp_rate": 12.11
+            },
+            "2022議員": {
+                "tpp_votes": 23,
+                "total_votes": 1873,
+                "tpp_rate": 1.23
+            },
+            "2024不分區": {
+                "tpp_votes": 591,
+                "total_votes": 2555,
+                "tpp_rate": 23.13
+            },
+            "2024總統": {
+                "tpp_votes": 688,
+                "total_votes": 2598,
+                "tpp_rate": 26.48
+            }
+        },
+        {
+            "villcode": "65000160014",
+            "name": "新明里",
+            "2020不分區": {
+                "tpp_votes": 244,
+                "total_votes": 2108,
+                "tpp_rate": 11.57
+            },
+            "2022議員": {
+                "tpp_votes": 24,
+                "total_votes": 1690,
+                "tpp_rate": 1.42
+            },
+            "2024不分區": {
+                "tpp_votes": 454,
+                "total_votes": 1977,
+                "tpp_rate": 22.96
+            },
+            "2024總統": {
+                "tpp_votes": 531,
+                "total_votes": 2013,
+                "tpp_rate": 26.38
+            }
+        },
+        {
+            "villcode": "65000160008",
+            "name": "明志里",
+            "2020不分區": {
+                "tpp_votes": 278,
+                "total_votes": 2414,
+                "tpp_rate": 11.52
+            },
+            "2022議員": {
+                "tpp_votes": 25,
+                "total_votes": 1871,
+                "tpp_rate": 1.34
+            },
+            "2024不分區": {
+                "tpp_votes": 539,
+                "total_votes": 2411,
+                "tpp_rate": 22.36
+            },
+            "2024總統": {
+                "tpp_votes": 648,
+                "total_votes": 2440,
+                "tpp_rate": 26.56
+            }
+        },
+        {
+            "villcode": "65000160011",
+            "name": "同興里",
+            "2020不分區": {
+                "tpp_votes": 290,
+                "total_votes": 2378,
+                "tpp_rate": 12.2
+            },
+            "2022議員": {
+                "tpp_votes": 28,
+                "total_votes": 1733,
+                "tpp_rate": 1.62
+            },
+            "2024不分區": {
+                "tpp_votes": 516,
+                "total_votes": 2337,
+                "tpp_rate": 22.08
+            },
+            "2024總統": {
+                "tpp_votes": 601,
+                "total_votes": 2347,
+                "tpp_rate": 25.61
+            }
+        },
+        {
+            "villcode": "65000160006",
+            "name": "同榮里",
+            "2020不分區": {
+                "tpp_votes": 294,
+                "total_votes": 2599,
+                "tpp_rate": 11.31
+            },
+            "2022議員": {
+                "tpp_votes": 31,
+                "total_votes": 1984,
+                "tpp_rate": 1.56
+            },
+            "2024不分區": {
+                "tpp_votes": 581,
+                "total_votes": 2654,
+                "tpp_rate": 21.89
+            },
+            "2024總統": {
+                "tpp_votes": 721,
+                "total_votes": 2704,
+                "tpp_rate": 26.66
+            }
+        },
+        {
+            "villcode": "65000160013",
+            "name": "泰友里",
+            "2020不分區": {
+                "tpp_votes": 174,
+                "total_votes": 1428,
+                "tpp_rate": 12.18
+            },
+            "2022議員": {
+                "tpp_votes": 12,
+                "total_votes": 1105,
+                "tpp_rate": 1.09
+            },
+            "2024不分區": {
+                "tpp_votes": 285,
+                "total_votes": 1306,
+                "tpp_rate": 21.82
+            },
+            "2024總統": {
+                "tpp_votes": 356,
+                "total_votes": 1317,
+                "tpp_rate": 27.03
+            }
+        },
+        {
+            "villcode": "65000160001",
+            "name": "大科里",
+            "2020不分區": {
+                "tpp_votes": 72,
+                "total_votes": 592,
+                "tpp_rate": 12.16
+            },
+            "2022議員": {
+                "tpp_votes": 2,
+                "total_votes": 543,
+                "tpp_rate": 0.37
+            },
+            "2024不分區": {
+                "tpp_votes": 114,
+                "total_votes": 533,
+                "tpp_rate": 21.39
+            },
+            "2024總統": {
+                "tpp_votes": 146,
+                "total_votes": 539,
+                "tpp_rate": 27.09
+            }
+        },
+        {
+            "villcode": "65000160004",
+            "name": "福泰里",
+            "2020不分區": {
+                "tpp_votes": 182,
+                "total_votes": 1800,
+                "tpp_rate": 10.11
+            },
+            "2022議員": {
+                "tpp_votes": 9,
+                "total_votes": 1432,
+                "tpp_rate": 0.63
+            },
+            "2024不分區": {
+                "tpp_votes": 355,
+                "total_votes": 1673,
+                "tpp_rate": 21.22
+            },
+            "2024總統": {
+                "tpp_votes": 431,
+                "total_votes": 1694,
+                "tpp_rate": 25.44
+            }
+        },
+        {
+            "villcode": "65000160015",
+            "name": "貴賢里",
+            "2020不分區": {
+                "tpp_votes": 317,
+                "total_votes": 2512,
+                "tpp_rate": 12.62
+            },
+            "2022議員": {
+                "tpp_votes": 22,
+                "total_votes": 2018,
+                "tpp_rate": 1.09
+            },
+            "2024不分區": {
+                "tpp_votes": 515,
+                "total_votes": 2427,
+                "tpp_rate": 21.22
+            },
+            "2024總統": {
+                "tpp_votes": 593,
+                "total_votes": 2438,
+                "tpp_rate": 24.32
+            }
+        }
+    ]
+}

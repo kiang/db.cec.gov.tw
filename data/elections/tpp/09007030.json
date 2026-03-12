@@ -1,0 +1,125 @@
+{
+    "county": "連江縣",
+    "town": "莒光鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 0,
+            "total_votes": 0,
+            "tpp_rate": 0
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 2324,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 319,
+            "total_votes": 1482,
+            "tpp_rate": 21.52
+        },
+        "2024總統": {
+            "tpp_votes": 398,
+            "total_votes": 1509,
+            "tpp_rate": 26.38
+        },
+        "party_rate_change": 21.52
+    },
+    "cunlis": [
+        {
+            "villcode": "09007030001",
+            "name": "青帆村、田沃村、西坵村",
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 442,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 67,
+                "total_votes": 302,
+                "tpp_rate": 22.19
+            },
+            "2024總統": {
+                "tpp_votes": 82,
+                "total_votes": 305,
+                "tpp_rate": 26.89
+            }
+        },
+        {
+            "villcode": "09007030002",
+            "name": "青帆村、田沃村、西坵村",
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 442,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 67,
+                "total_votes": 302,
+                "tpp_rate": 22.19
+            },
+            "2024總統": {
+                "tpp_votes": 82,
+                "total_votes": 305,
+                "tpp_rate": 26.89
+            }
+        },
+        {
+            "villcode": "09007030003",
+            "name": "青帆村、田沃村、西坵村",
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 442,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 67,
+                "total_votes": 302,
+                "tpp_rate": 22.19
+            },
+            "2024總統": {
+                "tpp_votes": 82,
+                "total_votes": 305,
+                "tpp_rate": 26.89
+            }
+        },
+        {
+            "villcode": "09007030004",
+            "name": "福正村、大坪村",
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 499,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 59,
+                "total_votes": 288,
+                "tpp_rate": 20.49
+            },
+            "2024總統": {
+                "tpp_votes": 76,
+                "total_votes": 297,
+                "tpp_rate": 25.59
+            }
+        },
+        {
+            "villcode": "09007030005",
+            "name": "福正村、大坪村",
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 499,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 59,
+                "total_votes": 288,
+                "tpp_rate": 20.49
+            },
+            "2024總統": {
+                "tpp_votes": 76,
+                "total_votes": 297,
+                "tpp_rate": 25.59
+            }
+        }
+    ]
+}

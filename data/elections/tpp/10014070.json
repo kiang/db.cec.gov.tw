@@ -1,0 +1,198 @@
+{
+    "county": "臺東縣",
+    "town": "東河鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 143,
+            "total_votes": 3956,
+            "tpp_rate": 3.61
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 2043,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 437,
+            "total_votes": 3708,
+            "tpp_rate": 11.79
+        },
+        "2024總統": {
+            "tpp_votes": 753,
+            "total_votes": 3854,
+            "tpp_rate": 19.54
+        },
+        "party_rate_change": 8.18
+    },
+    "cunlis": [
+        {
+            "villcode": "10014070003",
+            "name": "東河村",
+            "2020不分區": {
+                "tpp_votes": 32,
+                "total_votes": 517,
+                "tpp_rate": 6.19
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 166,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 86,
+                "total_votes": 522,
+                "tpp_rate": 16.48
+            },
+            "2024總統": {
+                "tpp_votes": 137,
+                "total_votes": 536,
+                "tpp_rate": 25.56
+            }
+        },
+        {
+            "villcode": "10014070004",
+            "name": "尚德村",
+            "2020不分區": {
+                "tpp_votes": 8,
+                "total_votes": 126,
+                "tpp_rate": 6.35
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 95,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 13,
+                "total_votes": 101,
+                "tpp_rate": 12.87
+            },
+            "2024總統": {
+                "tpp_votes": 17,
+                "total_votes": 107,
+                "tpp_rate": 15.89
+            }
+        },
+        {
+            "villcode": "10014070007",
+            "name": "都蘭村",
+            "2020不分區": {
+                "tpp_votes": 43,
+                "total_votes": 1306,
+                "tpp_rate": 3.29
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 681,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 150,
+                "total_votes": 1217,
+                "tpp_rate": 12.33
+            },
+            "2024總統": {
+                "tpp_votes": 254,
+                "total_votes": 1248,
+                "tpp_rate": 20.35
+            }
+        },
+        {
+            "villcode": "10014070002",
+            "name": "泰源村",
+            "2020不分區": {
+                "tpp_votes": 11,
+                "total_votes": 519,
+                "tpp_rate": 2.12
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 261,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 57,
+                "total_votes": 482,
+                "tpp_rate": 11.83
+            },
+            "2024總統": {
+                "tpp_votes": 101,
+                "total_votes": 518,
+                "tpp_rate": 19.5
+            }
+        },
+        {
+            "villcode": "10014070005",
+            "name": "隆昌村",
+            "2020不分區": {
+                "tpp_votes": 11,
+                "total_votes": 311,
+                "tpp_rate": 3.54
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 103,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 33,
+                "total_votes": 279,
+                "tpp_rate": 11.83
+            },
+            "2024總統": {
+                "tpp_votes": 58,
+                "total_votes": 291,
+                "tpp_rate": 19.93
+            }
+        },
+        {
+            "villcode": "10014070006",
+            "name": "興昌村",
+            "2020不分區": {
+                "tpp_votes": 16,
+                "total_votes": 489,
+                "tpp_rate": 3.27
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 338,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 50,
+                "total_votes": 496,
+                "tpp_rate": 10.08
+            },
+            "2024總統": {
+                "tpp_votes": 84,
+                "total_votes": 515,
+                "tpp_rate": 16.31
+            }
+        },
+        {
+            "villcode": "10014070001",
+            "name": "北源村",
+            "2020不分區": {
+                "tpp_votes": 22,
+                "total_votes": 688,
+                "tpp_rate": 3.2
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 399,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 48,
+                "total_votes": 611,
+                "tpp_rate": 7.86
+            },
+            "2024總統": {
+                "tpp_votes": 102,
+                "total_votes": 639,
+                "tpp_rate": 15.96
+            }
+        }
+    ]
+}

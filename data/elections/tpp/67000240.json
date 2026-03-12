@@ -1,0 +1,198 @@
+{
+    "county": "臺南市",
+    "town": "楠西區",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 320,
+            "total_votes": 5528,
+            "tpp_rate": 5.79
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 5121,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 694,
+            "total_votes": 5042,
+            "tpp_rate": 13.76
+        },
+        "2024總統": {
+            "tpp_votes": 1003,
+            "total_votes": 5194,
+            "tpp_rate": 19.31
+        },
+        "party_rate_change": 7.97
+    },
+    "cunlis": [
+        {
+            "villcode": "67000240001",
+            "name": "楠西里",
+            "2020不分區": {
+                "tpp_votes": 65,
+                "total_votes": 1189,
+                "tpp_rate": 5.47
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 958,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 178,
+                "total_votes": 1065,
+                "tpp_rate": 16.71
+            },
+            "2024總統": {
+                "tpp_votes": 229,
+                "total_votes": 1097,
+                "tpp_rate": 20.88
+            }
+        },
+        {
+            "villcode": "67000240004",
+            "name": "照興里",
+            "2020不分區": {
+                "tpp_votes": 31,
+                "total_votes": 634,
+                "tpp_rate": 4.89
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 575,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 89,
+                "total_votes": 592,
+                "tpp_rate": 15.03
+            },
+            "2024總統": {
+                "tpp_votes": 131,
+                "total_votes": 611,
+                "tpp_rate": 21.44
+            }
+        },
+        {
+            "villcode": "67000240007",
+            "name": "東勢里",
+            "2020不分區": {
+                "tpp_votes": 89,
+                "total_votes": 1513,
+                "tpp_rate": 5.88
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 1221,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 203,
+                "total_votes": 1361,
+                "tpp_rate": 14.92
+            },
+            "2024總統": {
+                "tpp_votes": 302,
+                "total_votes": 1400,
+                "tpp_rate": 21.57
+            }
+        },
+        {
+            "villcode": "67000240003",
+            "name": "密枝里",
+            "2020不分區": {
+                "tpp_votes": 46,
+                "total_votes": 435,
+                "tpp_rate": 10.57
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 516,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 49,
+                "total_votes": 382,
+                "tpp_rate": 12.83
+            },
+            "2024總統": {
+                "tpp_votes": 74,
+                "total_votes": 398,
+                "tpp_rate": 18.59
+            }
+        },
+        {
+            "villcode": "67000240006",
+            "name": "龜丹里",
+            "2020不分區": {
+                "tpp_votes": 23,
+                "total_votes": 448,
+                "tpp_rate": 5.13
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 434,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 46,
+                "total_votes": 405,
+                "tpp_rate": 11.36
+            },
+            "2024總統": {
+                "tpp_votes": 66,
+                "total_votes": 414,
+                "tpp_rate": 15.94
+            }
+        },
+        {
+            "villcode": "67000240005",
+            "name": "鹿田里",
+            "2020不分區": {
+                "tpp_votes": 33,
+                "total_votes": 601,
+                "tpp_rate": 5.49
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 624,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 65,
+                "total_votes": 594,
+                "tpp_rate": 10.94
+            },
+            "2024總統": {
+                "tpp_votes": 99,
+                "total_votes": 611,
+                "tpp_rate": 16.2
+            }
+        },
+        {
+            "villcode": "67000240002",
+            "name": "灣丘里",
+            "2020不分區": {
+                "tpp_votes": 33,
+                "total_votes": 708,
+                "tpp_rate": 4.66
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 793,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 64,
+                "total_votes": 643,
+                "tpp_rate": 9.95
+            },
+            "2024總統": {
+                "tpp_votes": 102,
+                "total_votes": 663,
+                "tpp_rate": 15.38
+            }
+        }
+    ]
+}

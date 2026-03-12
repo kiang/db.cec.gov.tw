@@ -1,0 +1,156 @@
+{
+    "county": "新北市",
+    "town": "烏來區",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 264,
+            "total_votes": 3636,
+            "tpp_rate": 7.26
+        },
+        "2022議員": {
+            "tpp_votes": 128,
+            "total_votes": 1902,
+            "tpp_rate": 6.73,
+            "candidates": [
+                {
+                    "name": "張凱鈞",
+                    "votes": 128,
+                    "elected": false
+                }
+            ]
+        },
+        "2024不分區": {
+            "tpp_votes": 674,
+            "total_votes": 3424,
+            "tpp_rate": 19.68
+        },
+        "2024總統": {
+            "tpp_votes": 859,
+            "total_votes": 3505,
+            "tpp_rate": 24.51
+        },
+        "party_rate_change": 12.42
+    },
+    "cunlis": [
+        {
+            "villcode": "65000290005",
+            "name": "孝義里",
+            "2020不分區": {
+                "tpp_votes": 11,
+                "total_votes": 177,
+                "tpp_rate": 6.21
+            },
+            "2022議員": {
+                "tpp_votes": 9,
+                "total_votes": 181,
+                "tpp_rate": 4.97
+            },
+            "2024不分區": {
+                "tpp_votes": 42,
+                "total_votes": 154,
+                "tpp_rate": 27.27
+            },
+            "2024總統": {
+                "tpp_votes": 43,
+                "total_votes": 154,
+                "tpp_rate": 27.92
+            }
+        },
+        {
+            "villcode": "65000290002",
+            "name": "忠治里",
+            "2020不分區": {
+                "tpp_votes": 88,
+                "total_votes": 1136,
+                "tpp_rate": 7.75
+            },
+            "2022議員": {
+                "tpp_votes": 43,
+                "total_votes": 620,
+                "tpp_rate": 6.94
+            },
+            "2024不分區": {
+                "tpp_votes": 215,
+                "total_votes": 1048,
+                "tpp_rate": 20.52
+            },
+            "2024總統": {
+                "tpp_votes": 284,
+                "total_votes": 1081,
+                "tpp_rate": 26.27
+            }
+        },
+        {
+            "villcode": "65000290003",
+            "name": "福山里",
+            "2020不分區": {
+                "tpp_votes": 17,
+                "total_votes": 363,
+                "tpp_rate": 4.68
+            },
+            "2022議員": {
+                "tpp_votes": 3,
+                "total_votes": 89,
+                "tpp_rate": 3.37
+            },
+            "2024不分區": {
+                "tpp_votes": 71,
+                "total_votes": 357,
+                "tpp_rate": 19.89
+            },
+            "2024總統": {
+                "tpp_votes": 90,
+                "total_votes": 369,
+                "tpp_rate": 24.39
+            }
+        },
+        {
+            "villcode": "65000290001",
+            "name": "烏來里",
+            "2020不分區": {
+                "tpp_votes": 129,
+                "total_votes": 1619,
+                "tpp_rate": 7.97
+            },
+            "2022議員": {
+                "tpp_votes": 61,
+                "total_votes": 853,
+                "tpp_rate": 7.15
+            },
+            "2024不分區": {
+                "tpp_votes": 301,
+                "total_votes": 1572,
+                "tpp_rate": 19.15
+            },
+            "2024總統": {
+                "tpp_votes": 373,
+                "total_votes": 1602,
+                "tpp_rate": 23.28
+            }
+        },
+        {
+            "villcode": "65000290004",
+            "name": "信賢里",
+            "2020不分區": {
+                "tpp_votes": 19,
+                "total_votes": 341,
+                "tpp_rate": 5.57
+            },
+            "2022議員": {
+                "tpp_votes": 12,
+                "total_votes": 159,
+                "tpp_rate": 7.55
+            },
+            "2024不分區": {
+                "tpp_votes": 45,
+                "total_votes": 293,
+                "tpp_rate": 15.36
+            },
+            "2024總統": {
+                "tpp_votes": 69,
+                "total_votes": 299,
+                "tpp_rate": 23.08
+            }
+        }
+    ]
+}

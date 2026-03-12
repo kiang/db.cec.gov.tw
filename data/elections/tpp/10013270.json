@@ -1,0 +1,174 @@
+{
+    "county": "屏東縣",
+    "town": "霧臺鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 92,
+            "total_votes": 2151,
+            "tpp_rate": 4.28
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 52,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 284,
+            "total_votes": 2115,
+            "tpp_rate": 13.43
+        },
+        "2024總統": {
+            "tpp_votes": 452,
+            "total_votes": 2198,
+            "tpp_rate": 20.56
+        },
+        "party_rate_change": 9.15
+    },
+    "cunlis": [
+        {
+            "villcode": "10013270003",
+            "name": "吉露村",
+            "2020不分區": {
+                "tpp_votes": 5,
+                "total_votes": 129,
+                "tpp_rate": 3.88
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 8,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 24,
+                "total_votes": 142,
+                "tpp_rate": 16.9
+            },
+            "2024總統": {
+                "tpp_votes": 43,
+                "total_votes": 143,
+                "tpp_rate": 30.07
+            }
+        },
+        {
+            "villcode": "10013270001",
+            "name": "霧台村",
+            "2020不分區": {
+                "tpp_votes": 50,
+                "total_votes": 852,
+                "tpp_rate": 5.87
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 16,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 124,
+                "total_votes": 778,
+                "tpp_rate": 15.94
+            },
+            "2024總統": {
+                "tpp_votes": 133,
+                "total_votes": 823,
+                "tpp_rate": 16.16
+            }
+        },
+        {
+            "villcode": "10013270005",
+            "name": "佳暮村",
+            "2020不分區": {
+                "tpp_votes": 3,
+                "total_votes": 245,
+                "tpp_rate": 1.22
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 1,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 35,
+                "total_votes": 266,
+                "tpp_rate": 13.16
+            },
+            "2024總統": {
+                "tpp_votes": 68,
+                "total_votes": 277,
+                "tpp_rate": 24.55
+            }
+        },
+        {
+            "villcode": "10013270002",
+            "name": "阿禮村",
+            "2020不分區": {
+                "tpp_votes": 10,
+                "total_votes": 233,
+                "tpp_rate": 4.29
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 4,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 29,
+                "total_votes": 233,
+                "tpp_rate": 12.45
+            },
+            "2024總統": {
+                "tpp_votes": 54,
+                "total_votes": 242,
+                "tpp_rate": 22.31
+            }
+        },
+        {
+            "villcode": "10013270006",
+            "name": "好茶村",
+            "2020不分區": {
+                "tpp_votes": 15,
+                "total_votes": 386,
+                "tpp_rate": 3.89
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 11,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 47,
+                "total_votes": 392,
+                "tpp_rate": 11.99
+            },
+            "2024總統": {
+                "tpp_votes": 89,
+                "total_votes": 398,
+                "tpp_rate": 22.36
+            }
+        },
+        {
+            "villcode": "10013270004",
+            "name": "大武村",
+            "2020不分區": {
+                "tpp_votes": 9,
+                "total_votes": 306,
+                "tpp_rate": 2.94
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 12,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 25,
+                "total_votes": 304,
+                "tpp_rate": 8.22
+            },
+            "2024總統": {
+                "tpp_votes": 65,
+                "total_votes": 315,
+                "tpp_rate": 20.63
+            }
+        }
+    ]
+}

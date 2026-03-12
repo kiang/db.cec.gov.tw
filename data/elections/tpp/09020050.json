@@ -1,0 +1,150 @@
+{
+    "county": "金門縣",
+    "town": "烈嶼鄉",
+    "summary": {
+        "2020不分區": {
+            "tpp_votes": 234,
+            "total_votes": 3610,
+            "tpp_rate": 6.48
+        },
+        "2022議員": {
+            "tpp_votes": 0,
+            "total_votes": 4148,
+            "tpp_rate": 0,
+            "candidates": []
+        },
+        "2024不分區": {
+            "tpp_votes": 570,
+            "total_votes": 3403,
+            "tpp_rate": 16.75
+        },
+        "2024總統": {
+            "tpp_votes": 843,
+            "total_votes": 3446,
+            "tpp_rate": 24.46
+        },
+        "party_rate_change": 10.27
+    },
+    "cunlis": [
+        {
+            "villcode": "09020050005",
+            "name": "黃埔村",
+            "2020不分區": {
+                "tpp_votes": 37,
+                "total_votes": 481,
+                "tpp_rate": 7.69
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 670,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 94,
+                "total_votes": 503,
+                "tpp_rate": 18.69
+            },
+            "2024總統": {
+                "tpp_votes": 150,
+                "total_votes": 505,
+                "tpp_rate": 29.7
+            }
+        },
+        {
+            "villcode": "09020050004",
+            "name": "林湖村",
+            "2020不分區": {
+                "tpp_votes": 78,
+                "total_votes": 1175,
+                "tpp_rate": 6.64
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 1304,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 194,
+                "total_votes": 1077,
+                "tpp_rate": 18.01
+            },
+            "2024總統": {
+                "tpp_votes": 283,
+                "total_votes": 1093,
+                "tpp_rate": 25.89
+            }
+        },
+        {
+            "villcode": "09020050002",
+            "name": "上林村",
+            "2020不分區": {
+                "tpp_votes": 26,
+                "total_votes": 400,
+                "tpp_rate": 6.5
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 428,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 61,
+                "total_votes": 377,
+                "tpp_rate": 16.18
+            },
+            "2024總統": {
+                "tpp_votes": 89,
+                "total_votes": 377,
+                "tpp_rate": 23.61
+            }
+        },
+        {
+            "villcode": "09020050001",
+            "name": "上岐村",
+            "2020不分區": {
+                "tpp_votes": 51,
+                "total_votes": 888,
+                "tpp_rate": 5.74
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 1031,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 127,
+                "total_votes": 810,
+                "tpp_rate": 15.68
+            },
+            "2024總統": {
+                "tpp_votes": 174,
+                "total_votes": 824,
+                "tpp_rate": 21.12
+            }
+        },
+        {
+            "villcode": "09020050003",
+            "name": "西口村",
+            "2020不分區": {
+                "tpp_votes": 42,
+                "total_votes": 666,
+                "tpp_rate": 6.31
+            },
+            "2022議員": {
+                "tpp_votes": 0,
+                "total_votes": 715,
+                "tpp_rate": 0
+            },
+            "2024不分區": {
+                "tpp_votes": 94,
+                "total_votes": 636,
+                "tpp_rate": 14.78
+            },
+            "2024總統": {
+                "tpp_votes": 147,
+                "total_votes": 647,
+                "tpp_rate": 22.72
+            }
+        }
+    ]
+}
