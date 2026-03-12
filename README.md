@@ -31,6 +31,7 @@ The data is organized in several key components:
 ### Directory Structure
 - `/data`: Contains organized election data
   - `/data/elections/`: Election-specific data
+  - `/data/elections/2020-2024/`: Per-cunli (village/neighborhood) JSON files aggregating results from 2020 party list, 2022 council, 2024 party list, and 2024 presidential elections. Files are named by geojson VILLCODE (e.g., `63000010002.json`)
   - `/data/council/`: Council election data
   - `/data/town_council/`: Township council election data
   - `/data/ly/`: Legislative Yuan election data
@@ -39,11 +40,12 @@ The data is organized in several key components:
 
 ### Data Format Notes
 - Character encoding: UTF-8
-- File format: CSV (Comma-Separated Values)
+- File format: CSV (Comma-Separated Values) and JSON
 - Date format: YYYY-MM-DD
-- Numerical values: 
+- Numerical values:
   - Vote counts are represented as integers
   - Percentages are shown with two decimal places followed by %
+- Per-cunli JSON files (`data/elections/2020-2024/`) include: `county`, `town`, `name`, and election result sections keyed by election label (e.g., `2020不分區`, `2022議員`, `2024不分區`, `2024總統`)
 
 ## Usage
 
@@ -69,8 +71,10 @@ The scripts are organized in the following directories:
   - `2022_match_2024.php`: Map 2022 districts to 2024 boundaries
   - `2018_match_2020.php`: Map 2018 districts to 2020 boundaries
 
+#### Cross-Election Scripts (`scripts/elections/`)
+- `2020-2024.php`: Aggregates cunli-level results from multiple elections (2020 party list, 2022 council, 2024 party list, 2024 presidential) into per-village JSON files. Uses geojson VILLCODE from `taiwan_basecode/cunli/geo/20221118.json` as output filenames. Merged election districts (0Axx codes) produce separate files for each constituent village with identical data.
+
 #### Other Directories
-- `scripts/elections/`: General election data processing scripts
 - `scripts/town_council/`: Township council election processing scripts
 - `scripts/report/`: Report generation scripts
 - `scripts/result/`: Results processing scripts

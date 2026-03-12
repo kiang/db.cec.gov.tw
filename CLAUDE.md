@@ -24,13 +24,31 @@ Taiwan Election Results Database — collects and processes voting results from 
    - `data/ly/` — Legislative Yuan
    - `data/council/` — County/city council
    - `data/town_council/` — Township council
-   - `data/elections/`, `data/count/`, `data/report/` — other processed data
+   - `data/elections/2020-2024/` — per-cunli JSON files (keyed by geojson VILLCODE) aggregating multiple elections
+   - `data/count/`, `data/report/` — other processed data
 
 ### Key Data Identifiers
 
 - Vote codes follow CEC format (e.g., `20091201C1C1`)
+- Election cunli codes: `{省市2}{縣市3}{鄉鎮市區3}{村里4}` (e.g., `630000100002` for 臺北市松山區莊敬里)
+- Geojson VILLCODE: 11-digit code from `taiwan_basecode/cunli/geo/20221118.json` (e.g., `63000010002`)
 - Area codes use Taiwan's administrative codes (e.g., `10002` for Yilan County)
 - Zone identifiers: `{area_code}-{zone_number}` (e.g., `10002-01`)
+
+### voteData Structure
+
+Raw CEC bulk data in `voteData/` uses a standard set of CSV files per election:
+- `elbase.csv` — administrative area hierarchy (province, county, zone, town, village, name)
+- `elcand.csv` — candidate records (codes, name, party code, gender, etc.)
+- `elctks.csv` — vote tallies per polling station (cunli-level aggregates have 投開票所=0000)
+- `elpaty.csv` — party code-to-name lookup
+- `elprof.csv` — electoral profile statistics (turnout, valid/invalid votes)
+
+2020/2024 national election CSVs use quoted fields; 2022 local election CSVs are unquoted. No header rows in any file.
+
+### Village Name Mapping Challenges
+
+Geojson village names may use bracket notation for rare characters (e.g., `灰[磘]里`) while elbase uses actual Unicode characters (including supplementary plane chars like U+25562). Some villages also use Private Use Area characters (U+E006). A manual mapping table handles the ~10 villages where character variants differ between sources. Use `array + array` (not `array_merge`) when merging arrays with numeric string keys to avoid key renumbering.
 
 ## Common Commands
 
@@ -41,6 +59,7 @@ cd scripts && composer install
 # Run processing scripts from project root
 php scripts/council/2026_00_zones.php
 php scripts/ly/2024_zone_cunli.php
+php scripts/elections/2020-2024.php
 
 # Download bulk election data
 php votedata.php
