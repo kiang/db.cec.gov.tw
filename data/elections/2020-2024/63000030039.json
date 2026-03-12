@@ -1,0 +1,249 @@
+{
+    "county": "臺北市",
+    "town": "大安區",
+    "name": "臥龍里",
+    "2020不分區": {
+        "合一行動聯盟": 0,
+        "中華統一促進黨": 0,
+        "親民黨": 65,
+        "安定力量": 8,
+        "台灣基進": 24,
+        "時代力量": 125,
+        "新黨": 49,
+        "喜樂島聯盟": 6,
+        "中國國民黨": 513,
+        "一邊一國行動黨": 6,
+        "勞動黨": 2,
+        "綠黨": 46,
+        "宗教聯盟": 1,
+        "民主進步黨": 302,
+        "台灣民眾黨": 165,
+        "台灣維新": 1,
+        "台澎黨": 1,
+        "國會政黨聯盟": 4,
+        "台灣團結聯盟": 0
+    },
+    "2022議員": [
+        {
+            "no": 19,
+            "name": "苗博雅",
+            "party": "社會民主黨",
+            "votes": 135,
+            "elected": true
+        },
+        {
+            "no": 14,
+            "name": "張志豪",
+            "party": "台灣民眾黨",
+            "votes": 92,
+            "elected": true
+        },
+        {
+            "no": 26,
+            "name": "楊植斗",
+            "party": "中國國民黨",
+            "votes": 84,
+            "elected": true
+        },
+        {
+            "no": 10,
+            "name": "李柏毅",
+            "party": "中國國民黨",
+            "votes": 67,
+            "elected": true
+        },
+        {
+            "no": 4,
+            "name": "曾獻瑩",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 66,
+            "elected": true
+        },
+        {
+            "no": 17,
+            "name": "徐弘庭",
+            "party": "中國國民黨",
+            "votes": 66,
+            "elected": true
+        },
+        {
+            "no": 22,
+            "name": "簡舒培",
+            "party": "民主進步黨",
+            "votes": 60,
+            "elected": true
+        },
+        {
+            "no": 20,
+            "name": "陳錦祥",
+            "party": "中國國民黨",
+            "votes": 55,
+            "elected": true
+        },
+        {
+            "no": 13,
+            "name": "趙怡翔",
+            "party": "民主進步黨",
+            "votes": 52,
+            "elected": true
+        },
+        {
+            "no": 15,
+            "name": "鍾沛君",
+            "party": "中國國民黨",
+            "votes": 46,
+            "elected": true
+        },
+        {
+            "no": 5,
+            "name": "王閔生",
+            "party": "民主進步黨",
+            "votes": 44,
+            "elected": true
+        },
+        {
+            "no": 18,
+            "name": "王欣儀",
+            "party": "中國國民黨",
+            "votes": 38,
+            "elected": true
+        },
+        {
+            "no": 9,
+            "name": "高揚凱",
+            "party": "中國國民黨",
+            "votes": 37,
+            "elected": false
+        },
+        {
+            "no": 25,
+            "name": "耿葳",
+            "party": "中國國民黨",
+            "votes": 36,
+            "elected": true
+        },
+        {
+            "no": 27,
+            "name": "陳聖文",
+            "party": "民主進步黨",
+            "votes": 29,
+            "elected": false
+        },
+        {
+            "no": 8,
+            "name": "詹晉鑒",
+            "party": "民主進步黨",
+            "votes": 25,
+            "elected": false
+        },
+        {
+            "no": 21,
+            "name": "林穎孟",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 20,
+            "elected": false
+        },
+        {
+            "no": 11,
+            "name": "蘇恆",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 18,
+            "elected": false
+        },
+        {
+            "no": 23,
+            "name": "林元敏",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 17,
+            "elected": false
+        },
+        {
+            "no": 6,
+            "name": "華珮君",
+            "party": "台灣動物保護黨",
+            "votes": 13,
+            "elected": false
+        },
+        {
+            "no": 12,
+            "name": "林岳龍",
+            "party": "新黨",
+            "votes": 13,
+            "elected": false
+        },
+        {
+            "no": 1,
+            "name": "張幸松",
+            "party": "台灣民眾黨",
+            "votes": 9,
+            "elected": false
+        },
+        {
+            "no": 3,
+            "name": "林泓泰",
+            "party": "時代力量",
+            "votes": 4,
+            "elected": false
+        },
+        {
+            "no": 7,
+            "name": "鄭淑娟",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 4,
+            "elected": false
+        },
+        {
+            "no": 16,
+            "name": "徐正文",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 4,
+            "elected": false
+        },
+        {
+            "no": 2,
+            "name": "張四維",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 0,
+            "elected": false
+        },
+        {
+            "no": 24,
+            "name": "鄭建炘",
+            "party": "臺灣人民共產黨",
+            "votes": 0,
+            "elected": false
+        }
+    ],
+    "2024不分區": {
+        "小民參政歐巴桑聯盟": 10,
+        "台灣綠黨": 13,
+        "臺灣雙語無法黨": 10,
+        "台灣基進": 5,
+        "中華統一促進黨": 1,
+        "民主進步黨": 333,
+        "制度救世島": 0,
+        "時代力量": 53,
+        "中國國民黨": 519,
+        "司法改革黨": 4,
+        "新黨": 9,
+        "台灣民眾黨": 272,
+        "台灣維新": 0,
+        "親民黨": 8,
+        "人民最大黨": 0,
+        "台灣團結聯盟": 1
+    },
+    "2024總統": {
+        "柯文哲": {
+            "party": "台灣民眾黨",
+            "votes": 292
+        },
+        "賴清德": {
+            "party": "民主進步黨",
+            "votes": 417
+        },
+        "侯友宜": {
+            "party": "中國國民黨",
+            "votes": 539
+        }
+    }
+}

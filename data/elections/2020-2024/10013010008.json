@@ -1,0 +1,214 @@
+{
+    "county": "屏東縣",
+    "town": "屏東市",
+    "name": "大埔里",
+    "2022議員": [
+        {
+            "no": 23,
+            "name": "張平原",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 224,
+            "elected": true
+        },
+        {
+            "no": 21,
+            "name": "梁育慈",
+            "party": "民主進步黨",
+            "votes": 82,
+            "elected": true
+        },
+        {
+            "no": 24,
+            "name": "李世斌",
+            "party": "民主進步黨",
+            "votes": 64,
+            "elected": true
+        },
+        {
+            "no": 18,
+            "name": "陳哲蕙",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 57,
+            "elected": false
+        },
+        {
+            "no": 25,
+            "name": "林明順",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 51,
+            "elected": true
+        },
+        {
+            "no": 7,
+            "name": "蔣月惠",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 50,
+            "elected": true
+        },
+        {
+            "no": 1,
+            "name": "鄭清原",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 45,
+            "elected": true
+        },
+        {
+            "no": 5,
+            "name": "梁梅瑛",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 42,
+            "elected": false
+        },
+        {
+            "no": 6,
+            "name": "黃明賢",
+            "party": "中國國民黨",
+            "votes": 40,
+            "elected": true
+        },
+        {
+            "no": 22,
+            "name": "鍾明輝",
+            "party": "民主進步黨",
+            "votes": 39,
+            "elected": false
+        },
+        {
+            "no": 13,
+            "name": "曾義雄",
+            "party": "中國國民黨",
+            "votes": 37,
+            "elected": true
+        },
+        {
+            "no": 15,
+            "name": "陳揚",
+            "party": "中國國民黨",
+            "votes": 33,
+            "elected": true
+        },
+        {
+            "no": 17,
+            "name": "蘇煥鈞",
+            "party": "民主進步黨",
+            "votes": 33,
+            "elected": false
+        },
+        {
+            "no": 10,
+            "name": "蔣家煌",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 32,
+            "elected": true
+        },
+        {
+            "no": 20,
+            "name": "方華雄",
+            "party": "中國國民黨",
+            "votes": 32,
+            "elected": false
+        },
+        {
+            "no": 19,
+            "name": "方一祥",
+            "party": "民主進步黨",
+            "votes": 31,
+            "elected": true
+        },
+        {
+            "no": 11,
+            "name": "唐玉琴",
+            "party": "中國國民黨",
+            "votes": 28,
+            "elected": false
+        },
+        {
+            "no": 16,
+            "name": "陳炫言",
+            "party": "台灣民眾黨",
+            "votes": 21,
+            "elected": false
+        },
+        {
+            "no": 9,
+            "name": "蘇資婷",
+            "party": "中國國民黨",
+            "votes": 20,
+            "elected": true
+        },
+        {
+            "no": 2,
+            "name": "吳尤敏",
+            "party": "民主進步黨",
+            "votes": 18,
+            "elected": false
+        },
+        {
+            "no": 8,
+            "name": "陳秋豪",
+            "party": "台灣基進",
+            "votes": 15,
+            "elected": false
+        },
+        {
+            "no": 12,
+            "name": "趙文俊",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 7,
+            "elected": false
+        },
+        {
+            "no": 14,
+            "name": "李承育",
+            "party": "時代力量",
+            "votes": 4,
+            "elected": false
+        },
+        {
+            "no": 4,
+            "name": "陳韋強",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 3,
+            "elected": false
+        },
+        {
+            "no": 3,
+            "name": "林建志",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 0,
+            "elected": false
+        }
+    ],
+    "2024不分區": {
+        "小民參政歐巴桑聯盟": 5,
+        "台灣綠黨": 2,
+        "臺灣雙語無法黨": 3,
+        "台灣基進": 13,
+        "中華統一促進黨": 0,
+        "民主進步黨": 572,
+        "制度救世島": 2,
+        "時代力量": 25,
+        "中國國民黨": 331,
+        "司法改革黨": 7,
+        "新黨": 0,
+        "台灣民眾黨": 199,
+        "台灣維新": 1,
+        "親民黨": 2,
+        "人民最大黨": 1,
+        "台灣團結聯盟": 5
+    },
+    "2024總統": {
+        "柯文哲": {
+            "party": "台灣民眾黨",
+            "votes": 260
+        },
+        "賴清德": {
+            "party": "民主進步黨",
+            "votes": 609
+        },
+        "侯友宜": {
+            "party": "中國國民黨",
+            "votes": 311
+        }
+    }
+}

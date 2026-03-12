@@ -1,0 +1,165 @@
+{
+    "county": "雲林縣",
+    "town": "斗六市",
+    "name": "正心里",
+    "2022議員": [
+        {
+            "no": 10,
+            "name": "賴淑娞",
+            "party": "中國國民黨",
+            "votes": 233,
+            "elected": true
+        },
+        {
+            "no": 2,
+            "name": "陳永修",
+            "party": "中國國民黨",
+            "votes": 131,
+            "elected": true
+        },
+        {
+            "no": 18,
+            "name": "曾博鴻",
+            "party": "民主進步黨",
+            "votes": 110,
+            "elected": true
+        },
+        {
+            "no": 1,
+            "name": "王又民",
+            "party": "中國國民黨",
+            "votes": 99,
+            "elected": true
+        },
+        {
+            "no": 4,
+            "name": "江文登",
+            "party": "民主進步黨",
+            "votes": 84,
+            "elected": true
+        },
+        {
+            "no": 13,
+            "name": "陳芳盈",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 65,
+            "elected": true
+        },
+        {
+            "no": 14,
+            "name": "黃勝志",
+            "party": "中國國民黨",
+            "votes": 60,
+            "elected": true
+        },
+        {
+            "no": 9,
+            "name": "廖郁賢",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 54,
+            "elected": false
+        },
+        {
+            "no": 7,
+            "name": "林岳璋",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 53,
+            "elected": true
+        },
+        {
+            "no": 3,
+            "name": "林靖冠",
+            "party": "台灣民眾黨",
+            "votes": 50,
+            "elected": false
+        },
+        {
+            "no": 8,
+            "name": "周秀月",
+            "party": "民主進步黨",
+            "votes": 47,
+            "elected": false
+        },
+        {
+            "no": 17,
+            "name": "鍾明馨",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 40,
+            "elected": true
+        },
+        {
+            "no": 6,
+            "name": "張光儀",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 38,
+            "elected": false
+        },
+        {
+            "no": 12,
+            "name": "張維崢",
+            "party": "民主進步黨",
+            "votes": 37,
+            "elected": true
+        },
+        {
+            "no": 15,
+            "name": "黃英學",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 29,
+            "elected": false
+        },
+        {
+            "no": 5,
+            "name": "林聖智",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 23,
+            "elected": false
+        },
+        {
+            "no": 11,
+            "name": "鄭自勤",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 14,
+            "elected": false
+        },
+        {
+            "no": 16,
+            "name": "呂宜臻",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 13,
+            "elected": false
+        }
+    ],
+    "2024不分區": {
+        "小民參政歐巴桑聯盟": 9,
+        "台灣綠黨": 8,
+        "臺灣雙語無法黨": 2,
+        "台灣基進": 12,
+        "中華統一促進黨": 1,
+        "民主進步黨": 445,
+        "制度救世島": 1,
+        "時代力量": 32,
+        "中國國民黨": 522,
+        "司法改革黨": 2,
+        "新黨": 6,
+        "台灣民眾黨": 319,
+        "台灣維新": 1,
+        "親民黨": 7,
+        "人民最大黨": 0,
+        "台灣團結聯盟": 6
+    },
+    "2024總統": {
+        "柯文哲": {
+            "party": "台灣民眾黨",
+            "votes": 369
+        },
+        "賴清德": {
+            "party": "民主進步黨",
+            "votes": 506
+        },
+        "侯友宜": {
+            "party": "中國國民黨",
+            "votes": 510
+        }
+    }
+}
