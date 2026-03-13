@@ -42,11 +42,6 @@ foreach (glob($cunliPath . '/*.json') as $jsonFile) {
             'county' => $meta['county'],
             'town' => $meta['town'],
             'cunlis' => [],
-            // Aggregated TPP totals
-            '2020不分區' => ['tpp' => 0, 'total' => 0],
-            '2022議員' => ['tpp_candidates' => [], 'tpp_votes' => 0, 'total_votes' => 0],
-            '2024不分區' => ['tpp' => 0, 'total' => 0],
-            '2024總統' => ['tpp' => 0, 'total' => 0],
         ];
     }
 
@@ -54,6 +49,8 @@ foreach (glob($cunliPath . '/*.json') as $jsonFile) {
 
     $cunliEntry = [
         'villcode' => $villcode,
+        'county' => $meta['county'],
+        'town' => $meta['town'],
         'name' => $data['name'],
     ];
 
@@ -61,62 +58,55 @@ foreach (glob($cunliPath . '/*.json') as $jsonFile) {
     if (isset($data['2020不分區'])) {
         $tpp = isset($data['2020不分區']['台灣民眾黨']) ? $data['2020不分區']['台灣民眾黨'] : 0;
         $total = array_sum($data['2020不分區']);
-        $cunliEntry['2020不分區'] = [
-            'tpp_votes' => $tpp,
-            'total_votes' => $total,
-            'tpp_rate' => $total > 0 ? round($tpp / $total * 100, 2) : 0,
-        ];
-        $towns[$towncode]['2020不分區']['tpp'] += $tpp;
-        $towns[$towncode]['2020不分區']['total'] += $total;
+        $cunliEntry['2020_tpp_votes'] = $tpp;
+        $cunliEntry['2020_total_votes'] = $total;
+        $cunliEntry['2020_tpp_rate'] = $total > 0 ? round($tpp / $total * 100, 2) : 0;
+    } else {
+        $cunliEntry['2020_tpp_votes'] = 0;
+        $cunliEntry['2020_total_votes'] = 0;
+        $cunliEntry['2020_tpp_rate'] = 0;
     }
 
     // 2022議員
     if (isset($data['2022議員'])) {
         $tppVotes = 0;
         $totalVotes = 0;
-        $tppCandidates = [];
+        $tppCandNames = [];
+        $tppElected = false;
         foreach ($data['2022議員'] as $cand) {
             $totalVotes += $cand['votes'];
             if ($cand['party'] === '台灣民眾黨') {
                 $tppVotes += $cand['votes'];
-                $candKey = $cand['name'];
-                $tppCandidates[$candKey] = [
-                    'name' => $cand['name'],
-                    'votes' => $cand['votes'],
-                    'elected' => $cand['elected'],
-                ];
+                $tppCandNames[] = $cand['name'];
+                if ($cand['elected']) {
+                    $tppElected = true;
+                }
             }
         }
-        $cunliEntry['2022議員'] = [
-            'tpp_votes' => $tppVotes,
-            'total_votes' => $totalVotes,
-            'tpp_rate' => $totalVotes > 0 ? round($tppVotes / $totalVotes * 100, 2) : 0,
-        ];
-        $towns[$towncode]['2022議員']['tpp_votes'] += $tppVotes;
-        $towns[$towncode]['2022議員']['total_votes'] += $totalVotes;
-        foreach ($tppCandidates as $key => $info) {
-            if (!isset($towns[$towncode]['2022議員']['tpp_candidates'][$key])) {
-                $towns[$towncode]['2022議員']['tpp_candidates'][$key] = [
-                    'name' => $info['name'],
-                    'votes' => 0,
-                    'elected' => $info['elected'],
-                ];
-            }
-            $towns[$towncode]['2022議員']['tpp_candidates'][$key]['votes'] += $info['votes'];
-        }
+        $cunliEntry['2022_tpp_votes'] = $tppVotes;
+        $cunliEntry['2022_total_votes'] = $totalVotes;
+        $cunliEntry['2022_tpp_rate'] = $totalVotes > 0 ? round($tppVotes / $totalVotes * 100, 2) : 0;
+        $cunliEntry['2022_tpp_candidates'] = implode('/', $tppCandNames);
+        $cunliEntry['2022_tpp_elected'] = $tppElected ? 'Y' : '';
+    } else {
+        $cunliEntry['2022_tpp_votes'] = 0;
+        $cunliEntry['2022_total_votes'] = 0;
+        $cunliEntry['2022_tpp_rate'] = 0;
+        $cunliEntry['2022_tpp_candidates'] = '';
+        $cunliEntry['2022_tpp_elected'] = '';
     }
 
     // 2024不分區
     if (isset($data['2024不分區'])) {
         $tpp = isset($data['2024不分區']['台灣民眾黨']) ? $data['2024不分區']['台灣民眾黨'] : 0;
         $total = array_sum($data['2024不分區']);
-        $cunliEntry['2024不分區'] = [
-            'tpp_votes' => $tpp,
-            'total_votes' => $total,
-            'tpp_rate' => $total > 0 ? round($tpp / $total * 100, 2) : 0,
-        ];
-        $towns[$towncode]['2024不分區']['tpp'] += $tpp;
-        $towns[$towncode]['2024不分區']['total'] += $total;
+        $cunliEntry['2024_tpp_votes'] = $tpp;
+        $cunliEntry['2024_total_votes'] = $total;
+        $cunliEntry['2024_tpp_rate'] = $total > 0 ? round($tpp / $total * 100, 2) : 0;
+    } else {
+        $cunliEntry['2024_tpp_votes'] = 0;
+        $cunliEntry['2024_total_votes'] = 0;
+        $cunliEntry['2024_tpp_rate'] = 0;
     }
 
     // 2024總統
@@ -129,73 +119,46 @@ foreach (glob($cunliPath . '/*.json') as $jsonFile) {
                 $tpp += $cand['votes'];
             }
         }
-        $cunliEntry['2024總統'] = [
-            'tpp_votes' => $tpp,
-            'total_votes' => $total,
-            'tpp_rate' => $total > 0 ? round($tpp / $total * 100, 2) : 0,
-        ];
-        $towns[$towncode]['2024總統']['tpp'] += $tpp;
-        $towns[$towncode]['2024總統']['total'] += $total;
+        $cunliEntry['2024pres_tpp_votes'] = $tpp;
+        $cunliEntry['2024pres_total_votes'] = $total;
+        $cunliEntry['2024pres_tpp_rate'] = $total > 0 ? round($tpp / $total * 100, 2) : 0;
+    } else {
+        $cunliEntry['2024pres_tpp_votes'] = 0;
+        $cunliEntry['2024pres_total_votes'] = 0;
+        $cunliEntry['2024pres_tpp_rate'] = 0;
     }
+
+    // Rate change: 2024不分區 - 2020不分區
+    $cunliEntry['party_rate_change'] = round($cunliEntry['2024_tpp_rate'] - $cunliEntry['2020_tpp_rate'], 2);
 
     $towns[$towncode]['cunlis'][] = $cunliEntry;
 }
 
-// Build output
-echo "Writing town JSON files...\n";
+// Write per-town CSV files
+echo "Writing town CSV files...\n";
+$header = [
+    'villcode', 'county', 'town', 'name',
+    '2020_tpp_votes', '2020_total_votes', '2020_tpp_rate',
+    '2022_tpp_votes', '2022_total_votes', '2022_tpp_rate', '2022_tpp_candidates', '2022_tpp_elected',
+    '2024_tpp_votes', '2024_total_votes', '2024_tpp_rate',
+    '2024pres_tpp_votes', '2024pres_total_votes', '2024pres_tpp_rate',
+    'party_rate_change',
+];
+
 $count = 0;
 foreach ($towns as $towncode => $town) {
-    // Sort cunlis by 2024 party list TPP rate descending
+    // Sort cunlis by party_rate_change descending
     usort($town['cunlis'], function ($a, $b) {
-        $rateA = isset($a['2024不分區']['tpp_rate']) ? $a['2024不分區']['tpp_rate'] : 0;
-        $rateB = isset($b['2024不分區']['tpp_rate']) ? $b['2024不分區']['tpp_rate'] : 0;
-        return $rateB <=> $rateA;
+        return $b['party_rate_change'] <=> $a['party_rate_change'];
     });
 
-    // Build town-level summary
-    $summary = [
-        '2020不分區' => [
-            'tpp_votes' => $town['2020不分區']['tpp'],
-            'total_votes' => $town['2020不分區']['total'],
-            'tpp_rate' => $town['2020不分區']['total'] > 0
-                ? round($town['2020不分區']['tpp'] / $town['2020不分區']['total'] * 100, 2) : 0,
-        ],
-        '2022議員' => [
-            'tpp_votes' => $town['2022議員']['tpp_votes'],
-            'total_votes' => $town['2022議員']['total_votes'],
-            'tpp_rate' => $town['2022議員']['total_votes'] > 0
-                ? round($town['2022議員']['tpp_votes'] / $town['2022議員']['total_votes'] * 100, 2) : 0,
-            'candidates' => array_values($town['2022議員']['tpp_candidates']),
-        ],
-        '2024不分區' => [
-            'tpp_votes' => $town['2024不分區']['tpp'],
-            'total_votes' => $town['2024不分區']['total'],
-            'tpp_rate' => $town['2024不分區']['total'] > 0
-                ? round($town['2024不分區']['tpp'] / $town['2024不分區']['total'] * 100, 2) : 0,
-        ],
-        '2024總統' => [
-            'tpp_votes' => $town['2024總統']['tpp'],
-            'total_votes' => $town['2024總統']['total'],
-            'tpp_rate' => $town['2024總統']['total'] > 0
-                ? round($town['2024總統']['tpp'] / $town['2024總統']['total'] * 100, 2) : 0,
-        ],
-    ];
-
-    // Rate change from 2020 to 2024 party list
-    $summary['party_rate_change'] = round($summary['2024不分區']['tpp_rate'] - $summary['2020不分區']['tpp_rate'], 2);
-
-    $output = [
-        'county' => $town['county'],
-        'town' => $town['town'],
-        'summary' => $summary,
-        'cunlis' => $town['cunlis'],
-    ];
-
-    file_put_contents(
-        $outputPath . '/' . $towncode . '.json',
-        json_encode($output, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)
-    );
+    $fh = fopen($outputPath . '/' . $towncode . '.csv', 'w');
+    fputcsv($fh, $header);
+    foreach ($town['cunlis'] as $row) {
+        fputcsv($fh, $row);
+    }
+    fclose($fh);
     $count++;
 }
 
-echo "Done. Generated {$count} town JSON files in data/elections/tpp/\n";
+echo "Done. Generated {$count} town CSV files in data/elections/tpp/\n";
