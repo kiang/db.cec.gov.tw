@@ -1,0 +1,89 @@
+{
+    "zone": "連江縣第04選區",
+    "code": "09007-04",
+    "city": "連江縣",
+    "areas": "東引鄉",
+    "towns": [
+        "東引鄉"
+    ],
+    "multi_town": false,
+    "cunli_count": 2,
+    "seats_2022": 1,
+    "cands_2022": 2,
+    "threshold_2022": 1034,
+    "threshold_who": "張永江（中國國民黨）",
+    "rates": {
+        "tpp_2020": 0,
+        "tpp_2022c": 0,
+        "tpp_2024": 26.69,
+        "tpp_2024p": 36.11,
+        "kmt_2024": 59.5,
+        "dpp_2024": 7.69,
+        "change": 26.69
+    },
+    "votes": {
+        "tpp_2020": 0,
+        "tpp_2022c": 0,
+        "tpp_2024": 340,
+        "tpp_2024p": 468
+    },
+    "turnout_ratio": 1.5118,
+    "est_base": 514,
+    "est_opt": 696,
+    "candidates_2022": [
+        {
+            "no": 2,
+            "name": "張永江",
+            "party": "中國國民黨",
+            "votes": 1034,
+            "elected": true
+        },
+        {
+            "no": 1,
+            "name": "馮印才",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 892,
+            "elected": false
+        }
+    ],
+    "tpp_cands_2022": [],
+    "conversion_rate": 0,
+    "councillors": [],
+    "elected_names": [],
+    "town_subtotals": [],
+    "cunlis": [
+        {
+            "name": "中柳村、樂華村",
+            "town": "東引鄉",
+            "label": "中柳村、樂華村",
+            "r2020": 0,
+            "r2024": 26.69,
+            "r2024p": 36.11,
+            "r2022c": 0,
+            "chg": 26.69,
+            "pvp": 9.42,
+            "est": 257,
+            "estO": 348,
+            "tier": "A",
+            "v2024": 170,
+            "total2024": 637
+        },
+        {
+            "name": "中柳村、樂華村",
+            "town": "東引鄉",
+            "label": "中柳村、樂華村",
+            "r2020": 0,
+            "r2024": 26.69,
+            "r2024p": 36.11,
+            "r2022c": 0,
+            "chg": 26.69,
+            "pvp": 9.42,
+            "est": 257,
+            "estO": 348,
+            "tier": "A",
+            "v2024": 170,
+            "total2024": 637
+        }
+    ],
+    "generated": "2026-03-15 01:59:14"
+}

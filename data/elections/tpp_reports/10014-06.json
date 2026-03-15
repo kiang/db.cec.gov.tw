@@ -1,0 +1,119 @@
+{
+    "zone": "臺東縣第06選區",
+    "code": "10014-06",
+    "city": "臺東縣",
+    "areas": "綠島鄉",
+    "towns": [
+        "綠島鄉"
+    ],
+    "multi_town": false,
+    "cunli_count": 3,
+    "seats_2022": 1,
+    "cands_2022": 4,
+    "threshold_2022": 677,
+    "threshold_who": "王姷力（無黨籍及未經政黨推薦）",
+    "rates": {
+        "tpp_2020": 8.22,
+        "tpp_2022c": 0,
+        "tpp_2024": 22.74,
+        "tpp_2024p": 31.78,
+        "kmt_2024": 53.76,
+        "dpp_2024": 16.03,
+        "change": 14.52
+    },
+    "votes": {
+        "tpp_2020": 141,
+        "tpp_2022c": 0,
+        "tpp_2024": 390,
+        "tpp_2024p": 559
+    },
+    "turnout_ratio": 1.3942,
+    "est_base": 543,
+    "est_opt": 760,
+    "candidates_2022": [
+        {
+            "no": 2,
+            "name": "王姷力",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 677,
+            "elected": true
+        },
+        {
+            "no": 4,
+            "name": "李數奼",
+            "party": "中國國民黨",
+            "votes": 648,
+            "elected": false
+        },
+        {
+            "no": 1,
+            "name": "林誌鴻",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 596,
+            "elected": false
+        },
+        {
+            "no": 3,
+            "name": "林為德",
+            "party": "無黨籍及未經政黨推薦",
+            "votes": 470,
+            "elected": false
+        }
+    ],
+    "tpp_cands_2022": [],
+    "conversion_rate": 0,
+    "councillors": [],
+    "elected_names": [],
+    "town_subtotals": [],
+    "cunlis": [
+        {
+            "name": "公舘村",
+            "town": "綠島鄉",
+            "label": "公舘村",
+            "r2020": 6.84,
+            "r2024": 24.29,
+            "r2024p": 35.25,
+            "r2022c": 0,
+            "chg": 17.45,
+            "pvp": 10.96,
+            "est": 167,
+            "estO": 243,
+            "tier": "B",
+            "v2024": 120,
+            "total2024": 494
+        },
+        {
+            "name": "中寮村",
+            "town": "綠島鄉",
+            "label": "中寮村",
+            "r2020": 7.84,
+            "r2024": 24.15,
+            "r2024p": 31.47,
+            "r2022c": 0,
+            "chg": 16.31,
+            "pvp": 7.32,
+            "est": 157,
+            "estO": 205,
+            "tier": "D",
+            "v2024": 113,
+            "total2024": 468
+        },
+        {
+            "name": "南寮村",
+            "town": "綠島鄉",
+            "label": "南寮村",
+            "r2020": 9.32,
+            "r2024": 20.85,
+            "r2024p": 29.7,
+            "r2022c": 0,
+            "chg": 11.53,
+            "pvp": 8.85,
+            "est": 219,
+            "estO": 312,
+            "tier": "D",
+            "v2024": 157,
+            "total2024": 753
+        }
+    ],
+    "generated": "2026-03-15 01:59:14"
+}
