@@ -466,15 +466,31 @@ foreach ($zones as $zoneCode => $zone) {
 
     file_put_contents($outputPath . '/' . $zoneCode . '.json', json_encode($json, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
+    $tppElected2022 = count(array_filter($tppCands2022, function ($c) { return $c['elected']; }));
     $zoneIndex[] = [
         'code' => $zoneCode,
         'zone' => $zoneName,
         'city' => $city,
         'areas' => $areasStr,
+        'seats' => $numSeats,
+        'r2020' => $zone2020Rate,
         'r2024' => $zone2024Rate,
+        'r2024p' => $zone2024PresRate,
+        'r2022c' => $zone2022Rate,
+        'kmt' => $kmt2024Rate,
+        'dpp' => $dpp2024Rate,
         'chg' => $zoneRateChange,
         'est' => $totalEstVotes,
+        'estO' => $totalEstOptimistic,
         'threshold' => $winThreshold2022,
+        'v2024' => $zoneTotals['2024_tpp'],
+        'v2020' => $zoneTotals['2020_tpp'],
+        'v2022c' => $tppTotalVotes2022,
+        'conv' => $councilVsParty,
+        'tpp_nominated' => count($tppCands2022),
+        'tpp_elected' => $tppElected2022,
+        'elected_names' => array_keys($electedNames),
+        'cunli_count' => $numCunlis,
     ];
     $count++;
 }
