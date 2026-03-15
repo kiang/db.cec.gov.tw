@@ -32,10 +32,6 @@
 .legend-box{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;font-size:.82em}
 .legend-box .item{display:flex;align-items:center;gap:4px}
 .legend-box .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
-#chart-container{height:300px;margin-bottom:16px;position:relative;overflow-x:auto}
-.chart-bar-group{display:inline-flex;flex-direction:column;align-items:center;margin:0 1px;vertical-align:bottom}
-.chart-bar{width:5px;border-radius:2px 2px 0 0;transition:height .5s ease}
-.chart-label{font-size:.55em;color:var(--text2);writing-mode:vertical-rl;text-orientation:mixed;max-height:60px;overflow:hidden;margin-top:2px}
 .tab-bar{display:flex;gap:0;margin-bottom:16px;border-bottom:2px solid var(--border)}
 .tab-bar button{padding:8px 20px;border:none;background:transparent;font-size:.9em;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;color:var(--text2);font-weight:500}
 .tab-bar button.active{border-bottom-color:var(--tpp);color:var(--tpp-dark);font-weight:700}
@@ -156,18 +152,27 @@ function renderOverview() {
 
   // Bar chart - all zones sorted by surplus ratio
   const sorted = ZONES.filter(z => z.threshold > 0).sort((a,b) => (b.est/b.threshold) - (a.est/a.threshold));
-  html += '<div style="font-size:.85em;color:var(--text2);margin-bottom:6px">各選區基本盤 vs 當選門檻比值（>1 = 過門檻）</div>';
-  html += '<div id="chart-container" style="display:flex;align-items:flex-end;height:200px;border-bottom:1px solid var(--border);padding:0 4px;overflow-x:auto">';
+  const chartH = 200;
   const maxRatio = Math.min(Math.max(...sorted.map(z => z.est/z.threshold)), 5);
+  // Threshold line position
+  const threshLineH = Math.round(1 / maxRatio * chartH);
+  html += '<div style="font-size:.85em;color:var(--text2);margin-bottom:6px">各選區基本盤 vs 當選門檻比值（紅線 = 門檻）</div>';
+  html += `<div style="position:relative;height:${chartH}px;border-bottom:2px solid var(--border);margin-bottom:4px">`;
+  // Threshold reference line
+  html += `<div style="position:absolute;bottom:${threshLineH}px;left:0;right:0;border-top:2px dashed var(--warn);z-index:1"></div>`;
+  html += `<div style="position:absolute;bottom:${threshLineH + 2}px;right:4px;font-size:.68em;color:var(--warn);font-weight:600">門檻 (1x)</div>`;
+  // Bars
+  html += `<div style="display:flex;align-items:flex-end;height:100%;gap:1px;padding:0 2px">`;
+  const barW = Math.max(Math.floor(900 / sorted.length), 3);
   sorted.forEach(z => {
     const ratio = z.est / z.threshold;
-    const pct = Math.min(ratio / maxRatio * 100, 100);
+    const barH = Math.round(Math.min(ratio / maxRatio, 1) * chartH);
     const color = colors[z.rec];
-    const tip = `${z.zone}\\n基本盤: ${fmt(z.est)} / 門檻: ${fmt(z.threshold)}\\n比值: ${ratio.toFixed(2)}`;
-    html += `<div class="chart-bar-group" title="${tip}"><div class="chart-bar" style="height:${pct}%;background:${color}"></div></div>`;
+    const tip = `${z.zone}\n基本盤: ${fmt(z.est)} / 門檻: ${fmt(z.threshold)}\n比值: ${ratio.toFixed(2)}`;
+    html += `<div title="${tip}" style="width:${barW}px;height:${barH}px;background:${color};border-radius:2px 2px 0 0;flex-shrink:0;cursor:pointer" onclick="location.href='index.html?zone=${z.code}'"></div>`;
   });
-  html += '</div>';
-  html += '<div style="display:flex;justify-content:space-between;font-size:.72em;color:var(--text2);margin-top:2px"><span>← 高餘裕</span><span>低餘裕 / 未達門檻 →</span></div>';
+  html += '</div></div>';
+  html += '<div style="display:flex;justify-content:space-between;font-size:.72em;color:var(--text2)"><span>← 高餘裕</span><span>低餘裕 / 未達門檻 →</span></div>';
 
   // Summary table by group
   order.forEach(k => {
