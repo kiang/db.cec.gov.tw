@@ -7,12 +7,11 @@ if (!file_exists($outputPath)) {
     mkdir($outputPath, 0777, true);
 }
 
-// Load 2026 zones
+// Load 2026 zones metadata from zones.csv
 echo "Loading 2026 zones...\n";
 $zonesCsv = array_map('str_getcsv', file($rootPath . '/data/council/2026/zones.csv'));
 array_shift($zonesCsv); // remove header: city,zone,code,areas,name,party
 $zones = [];
-$townNameToZone = []; // "臺北市松山區" => zone code
 foreach ($zonesCsv as $row) {
     if (count($row) < 4) continue;
     list($city, $zoneName, $code, $areas) = $row;
@@ -22,20 +21,25 @@ foreach ($zonesCsv as $row) {
         'zone_name' => $zoneName,
         'code' => $code,
         'town_names' => $townNames,
-        'towncodes' => [], // filled after geojson load
         'cunlis' => [],
     ];
-    foreach ($townNames as $tn) {
-        $townNameToZone[$city . $tn] = $code;
-    }
 }
 
-// Load geojson to build VILLCODE => town mapping and TOWNNAME => TOWNCODE
+// Load cunli.csv for village_code => zone mapping
+echo "Loading 2026 cunli zones...\n";
+$cunliCsv = array_map('str_getcsv', file($rootPath . '/data/council/2026/cunli.csv'));
+array_shift($cunliCsv); // remove header: zone,city,area,village,village_code
+$villcodeToZone = []; // village_code => zone code
+foreach ($cunliCsv as $row) {
+    if (count($row) < 5) continue;
+    $villcodeToZone[$row[4]] = $row[0];
+}
+
+// Load geojson to build VILLCODE => town mapping
 echo "Loading geojson...\n";
 $geoJson = json_decode(file_get_contents('/home/kiang/public_html/taiwan_basecode/cunli/geo/20221118.json'), true);
 
 $villToTown = [];
-$townNameToCode = []; // "臺北市松山區" => TOWNCODE
 foreach ($geoJson['features'] as $f) {
     $p = $f['properties'];
     if (empty($p['VILLCODE']) || empty($p['VILLNAME'])) {
@@ -47,26 +51,8 @@ foreach ($geoJson['features'] as $f) {
         'town' => $p['TOWNNAME'],
         'villname' => $p['VILLNAME'],
     ];
-    $key = $p['COUNTYNAME'] . $p['TOWNNAME'];
-    if (!isset($townNameToCode[$key])) {
-        $townNameToCode[$key] = $p['TOWNCODE'];
-    }
 }
 unset($geoJson);
-
-// Map towncodes to zones
-$towncodeToZone = []; // TOWNCODE => zone code
-foreach ($zones as $code => &$zone) {
-    foreach ($zone['town_names'] as $tn) {
-        $key = $zone['city'] . $tn;
-        if (isset($townNameToCode[$key])) {
-            $tc = $townNameToCode[$key];
-            $zone['towncodes'][] = $tc;
-            $towncodeToZone[$tc] = $code;
-        }
-    }
-}
-unset($zone);
 
 // Load all cunli data grouped by zone
 echo "Processing cunli data...\n";
@@ -76,11 +62,10 @@ foreach (glob($cunliPath . '/*.json') as $jsonFile) {
         continue;
     }
     $meta = $villToTown[$villcode];
-    $towncode = $meta['towncode'];
-    if (!isset($towncodeToZone[$towncode])) {
+    if (!isset($villcodeToZone[$villcode])) {
         continue;
     }
-    $zoneCode = $towncodeToZone[$towncode];
+    $zoneCode = $villcodeToZone[$villcode];
 
     $data = json_decode(file_get_contents($jsonFile), true);
 
