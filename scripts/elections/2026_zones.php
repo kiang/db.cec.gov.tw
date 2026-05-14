@@ -64,7 +64,11 @@ foreach ($electionTypes as $type) {
 
 $json = json_decode(file_get_contents('/home/kiang/public_html/taiwan_basecode/cunli/geo/20260407.json'), true);
 
-// TODO: R1 zones for multi-zone townships need manual verification
+// Rare-character villages not matched by elbase name lookup.
+// R1 zone format: R1-{省市2}{縣市3}{鄉鎮3}-{選區2}, e.g. 'R1-10007010-03'
+// R1 only applies to 縣 (non-直轄市). 直轄市 (臺北/新北/桃園/臺中/臺南/高雄) and
+// 省轄市 (嘉義市) have no R1/R2/R3 zones.
+// To find the correct R1 zone, look up the village in the R1 elbase.csv.
 $map = [
     // rare characters
     '南投縣名間鄉廍下村' => ['T1-10008-01', 'T2-10008-06', 'T3-10008-08'],
@@ -107,6 +111,9 @@ $map = [
     '高雄市左營區廍北里' => ['T1-64000-04', 'T2-64000-12', 'T3-64000-13'],
     '高雄市左營區廍南里' => ['T1-64000-04', 'T2-64000-12', 'T3-64000-13'],
     // 2026 new villages (splits from 2022, need manual zone mapping)
+    // 縣 villages need T1 + R1 (+ T2/T3 if applicable)
+    // 直轄市 villages need T1 (+ T2/T3 if applicable), no R1
+    // e.g. '宜蘭縣員山鄉金古村' => ['T1-10002-03', 'R1-10002070-02'],
     '宜蘭縣員山鄉金古村' => [],
     '宜蘭縣員山鄉金泰村' => [],
     '宜蘭縣壯圍鄉壯六村' => [],
