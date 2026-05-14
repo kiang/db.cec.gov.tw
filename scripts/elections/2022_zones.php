@@ -3,7 +3,17 @@
 $basePath = dirname(dirname(__DIR__));
 $voteDataPath = $basePath . '/voteData/2022-111年地方公職人員選舉';
 
+$typeNames = [
+    'R1' => '鄉鎮市民代表(區域)',
+    'R2' => '鄉鎮市民代表(平原原住民)',
+    'R3' => '直轄市原住民區民代表',
+    'T1' => '議員(區域)',
+    'T2' => '議員(平地原住民)',
+    'T3' => '議員(山地原住民)',
+];
+
 $pool = [];
+$zoneNames = [];
 
 $electionTypes = ['R1', 'R2', 'R3', 'T1', 'T2', 'T3'];
 
@@ -28,6 +38,13 @@ foreach ($electionTypes as $type) {
                     $zoneCode = $type . '-' . $line[0] . $line[1] . $line[3] . '-' . $line[2];
                 } else {
                     $zoneCode = $type . '-' . $line[0] . $line[1] . '-' . $line[2];
+                }
+                if (!isset($zoneNames[$zoneCode])) {
+                    if ($isRType) {
+                        $zoneNames[$zoneCode] = $codes[$code] . '第' . $line[2] . '選區';
+                    } else {
+                        $zoneNames[$zoneCode] = $codes[$line[0] . $line[1]] . '第' . $line[2] . '選區';
+                    }
                 }
                 $pool[$codes[$code]][] = $zoneCode;
                 foreach ($parts as $part) {
@@ -127,4 +144,13 @@ foreach ($zoneFeatures as $zoneCode => $features) {
     file_put_contents($filePath, json_encode($fc, JSON_UNESCAPED_UNICODE));
 }
 
-echo "Done. Generated " . count($zoneFeatures) . " zone files in {$outputPath}\n";
+ksort($zoneNames, SORT_NATURAL);
+$fh = fopen($outputPath . '/list.csv', 'w');
+fputcsv($fh, ['type', 'code', 'name', 'type_name']);
+foreach ($zoneNames as $zoneCode => $name) {
+    $type = substr($zoneCode, 0, 2);
+    fputcsv($fh, [$type, $zoneCode, $name, $typeNames[$type]]);
+}
+fclose($fh);
+
+echo "Done. Generated " . count($zoneFeatures) . " zone files and list.csv in {$outputPath}\n";
