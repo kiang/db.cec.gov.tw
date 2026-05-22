@@ -98,7 +98,7 @@
 
     <section>
       <h2>三、2026 議員選票預估</h2>
-      <div style="font-size:.82em;color:var(--text2);margin-bottom:12px">以 2024 政黨票得票率 × 議員選舉投票率（${(d.turnout_ratio * 100).toFixed(1)}%）推算</div>
+      <div style="font-size:.82em;color:var(--text2);margin-bottom:12px">以 2020→2022 政黨票轉議員票轉換率（${(d.conversion_2020_2022 * 100).toFixed(1)}%）× 2024 政黨票 × 投票率比（${(d.turnout_ratio * 100).toFixed(1)}%）推算</div>
       <div class="est-box">
         <div class="row hl"><span>基本盤預估</span><span>${fmt(d.est_base)} 票</span></div>
         <div class="row"><span>樂觀預估（含總統票外溢）</span><span>${fmt(d.est_opt)} 票</span></div>
@@ -135,6 +135,7 @@
     <footer>
       資料來源：中央選舉委員會選舉資料庫 ｜ 涵蓋選舉：2020不分區、2022議員、2024不分區、2024總統<br>
       目標選舉：2026 縣市議員 ｜ 報告產生時間：${h(d.generated)}<br>
+      預估方法：以 2020→2022 政黨票轉議員票轉換率，套用 2024 政黨票推算 2026 議員票。<br>
       注意：預估票數僅供參考，實際得票受候選人特質、選情變化、投票率及對手策略等多重因素影響。<br>
       資料整理：<a href="https://facebook.com/k.olc.tw" target="_blank" rel="noopener">江明宗</a>
     </footer>`;
