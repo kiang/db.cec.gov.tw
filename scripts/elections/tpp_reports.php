@@ -160,6 +160,29 @@ foreach (glob($cunliPath . '/*.json') as $jsonFile) {
     $zones[$zoneCode]['cunlis'][] = $c;
 }
 
+// Pre-compute global average conversion rate from zones where TPP had 2022 council candidates
+$globalTpp2020 = 0;
+$globalTpp2022 = 0;
+foreach ($zones as $zone) {
+    if (count($zone['cunlis']) === 0) continue;
+    $hasTPPCand = false;
+    $zoneTpp2020 = 0;
+    $zoneTpp2022 = 0;
+    foreach ($zone['cunlis'] as $c) {
+        if (count($c['2022_tpp_cands']) > 0) {
+            $hasTPPCand = true;
+        }
+        $zoneTpp2020 += $c['2020_tpp'];
+        $zoneTpp2022 += $c['2022_tpp_votes'];
+    }
+    if ($hasTPPCand && $zoneTpp2020 > 0 && $zoneTpp2022 > 0) {
+        $globalTpp2020 += $zoneTpp2020;
+        $globalTpp2022 += $zoneTpp2022;
+    }
+}
+$globalConversionRate = $globalTpp2020 > 0 ? $globalTpp2022 / $globalTpp2020 : 0;
+echo "Global TPP 2020→2022 conversion rate: " . round($globalConversionRate * 100, 1) . "% (from zones with TPP candidates)\n";
+
 // Generate JSON data files
 echo "Generating JSON data...\n";
 $count = 0;
@@ -263,11 +286,27 @@ foreach ($zones as $zoneCode => $zone) {
     }
 
     // Estimate 2026 TPP vote potential
+    // Use 2020→2022 conversion rate to predict how 2024 support translates to 2026 council votes
     $turnoutRatio2022 = ($zoneTotals['2024_total'] > 0 && $zoneTotals['2022_total'] > 0)
         ? $zoneTotals['2022_total'] / $zoneTotals['2024_total'] : 0.7;
+    // Zone-level conversion: only meaningful if TPP had candidates in this zone in 2022
+    $zoneHasTPPCand = false;
+    foreach ($cunlis as $c) {
+        if (count($c['2022_tpp_cands']) > 0) {
+            $zoneHasTPPCand = true;
+            break;
+        }
+    }
+    $zoneConversionRate = ($zoneHasTPPCand && $zoneTotals['2020_tpp'] > 0 && $zoneTotals['2022_tpp_votes'] > 0)
+        ? $zoneTotals['2022_tpp_votes'] / $zoneTotals['2020_tpp'] : $globalConversionRate;
     foreach ($cunlis as &$c) {
         $estTurnout = round($c['2024_total'] * $turnoutRatio2022);
-        $c['est_2026_votes'] = round($estTurnout * $c['2024_rate'] / 100);
+        // Per-cunli conversion: use own rate if had TPP candidates, otherwise zone, otherwise global
+        $cunliConversion = ($c['2020_tpp'] > 0 && $c['2022_tpp_votes'] > 0)
+            ? $c['2022_tpp_votes'] / $c['2020_tpp'] : $zoneConversionRate;
+        // Base estimate: apply conversion rate to 2024 party-list votes, scaled by turnout
+        $c['est_2026_votes'] = round($c['2024_tpp'] * $cunliConversion * $turnoutRatio2022);
+        // Optimistic: use 2024 rate directly (old method)
         $maxRate = max($c['2024_rate'], $c['2024pres_rate']);
         $c['est_2026_optimistic'] = round($estTurnout * $maxRate / 100);
     }
@@ -431,6 +470,7 @@ foreach ($zones as $zoneCode => $zone) {
             'tpp_2024' => $zoneTotals['2024_tpp'], 'tpp_2024p' => $zoneTotals['2024pres_tpp'],
         ],
         'turnout_ratio' => round($turnoutRatio2022, 4),
+        'conversion_2020_2022' => round($zoneConversionRate, 4),
         'est_base' => $totalEstVotes,
         'est_opt' => $totalEstOptimistic,
         'candidates_2022' => array_map(function ($c) {
