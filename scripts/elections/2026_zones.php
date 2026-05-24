@@ -278,6 +278,45 @@ foreach ($t1Overrides as $zoneCode => $keys) {
     }
 }
 
+// 2026 new county-wide indigenous zones (山地原住民) not present in 2022 data
+// These zones cover the entire county — all villages map to this zone.
+$countyWideT3 = [
+    'T3-10007-10' => '10007', // 彰化縣第10選區 山地原住民
+];
+
+foreach ($countyWideT3 as $zoneCode => $countyCode) {
+    $zoneNum = substr($zoneCode, -2);
+    $zoneNames[$zoneCode] = $overrideCountyNames[$countyCode] ?? '';
+    // Try to get county name from existing zone names
+    if (empty($zoneNames[$zoneCode])) {
+        foreach ($zoneNames as $zn => $name) {
+            if (strpos($zn, $countyCode) !== false) {
+                $zoneNames[$zoneCode] = mb_ereg_replace('第\d+選區$', '', $name) . '第' . $zoneNum . '選區';
+                break;
+            }
+        }
+    } else {
+        $zoneNames[$zoneCode] = $zoneNames[$zoneCode] . '第' . $zoneNum . '選區';
+    }
+    // Map all villages in this county to this zone
+    foreach ($json['features'] as $f) {
+        $p = $f['properties'];
+        if (substr($p['TOWNCODE'] ?? '', 0, 5) === $countyCode) {
+            if (!empty($p['VILLNAME'])) {
+                $key = $p['COUNTYNAME'] . $p['TOWNNAME'] . $p['VILLNAME'];
+            } else {
+                $key = $p['COUNTYNAME'] . $p['TOWNNAME'];
+            }
+            if (!isset($pool[$key])) {
+                $pool[$key] = [];
+            }
+            if (!in_array($zoneCode, $pool[$key])) {
+                $pool[$key][] = $zoneCode;
+            }
+        }
+    }
+}
+
 // Rare-character villages not matched by elbase name lookup.
 // R1 zone format: R1-{省市2}{縣市3}{鄉鎮3}-{選區2}, e.g. 'R1-10007010-03'
 // R1 only applies to 縣 (non-直轄市). 直轄市 (臺北/新北/桃園/臺中/臺南/高雄) and
@@ -291,12 +330,12 @@ $map = [
     '屏東縣新園鄉瓦[磘]村' => ['T1-10013-04', 'T2-10013-08', 'T3-10013-13'],
     '屏東縣東港鎮下廍里' => ['T1-10013-04', 'T2-10013-08', 'T3-10013-09'],
     '屏東縣里港鄉三廍村' => ['T1-10013-02', 'T2-10013-08', 'T3-10013-10'],
-    '彰化縣埔鹽鄉廍子村' => ['T1-10007-05', 'T2-10007-09'],
-    '彰化縣埔鹽鄉瓦[磘]村' => ['T1-10007-05', 'T2-10007-09'],
-    '彰化縣彰化市下廍里' => ['T1-10007-01', 'T2-10007-09'],
-    '彰化縣彰化市寶廍里' => ['T1-10007-01', 'T2-10007-09'],
-    '彰化縣彰化市磚[磘]里' => ['T1-10007-01', 'T2-10007-09'],
-    '彰化縣芳苑鄉頂廍村' => ['T1-10007-08', 'T2-10007-09'],
+    '彰化縣埔鹽鄉廍子村' => ['T1-10007-05', 'T2-10007-09', 'T3-10007-10'],
+    '彰化縣埔鹽鄉瓦[磘]村' => ['T1-10007-05', 'T2-10007-09', 'T3-10007-10'],
+    '彰化縣彰化市下廍里' => ['T1-10007-01', 'T2-10007-09', 'T3-10007-10'],
+    '彰化縣彰化市寶廍里' => ['T1-10007-01', 'T2-10007-09', 'T3-10007-10'],
+    '彰化縣彰化市磚[磘]里' => ['T1-10007-01', 'T2-10007-09', 'T3-10007-10'],
+    '彰化縣芳苑鄉頂廍村' => ['T1-10007-08', 'T2-10007-09', 'T3-10007-10'],
     '新北市中和區灰[磘]里' => ['T1-65000-06', 'T2-65000-12', 'T3-65000-13'],
     '新北市中和區瓦[磘]里' => ['T1-65000-06', 'T2-65000-12', 'T3-65000-13'],
     '新北市坪林區石[曹]里' => ['T1-65000-09', 'T2-65000-12', 'T3-65000-13'],
